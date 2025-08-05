@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DQ3 Item Compatibility</title>
+    <title>DQ Item Compatibility</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -78,7 +77,14 @@
     </style>
 </head>
 <body>
-    <h1>Dragon Quest III Item Compatibility</h1>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <label for="gameSelection">Select Game:</label>
+        <select id="gameSelection">
+            <option value="dw3">Dragon Quest III</option>
+            <option value="dw4" selected>Dragon Quest IV</option>
+        </select>
+    </div>
+    <h1 id="mainHeading"></h1>
     <div id="app"></div>
 
     <script>
@@ -91,81 +97,119 @@
           }
           return res.json();
         }
-        document.addEventListener('DOMContentLoaded', async () => {
-            const appDiv = document.getElementById('app');
-            const jsonData = await safeFetchJson('dat/dw4.json');
-            const classes = jsonData.classes;
 
-            // Define the order of item types for display
-            const itemTypesOrder = ['armor', 'shields', 'helmets', 'weapons'];
+        const appDiv = document.getElementById('app');
+        const gameSelection = document.getElementById('gameSelection');
+        const mainHeading = document.getElementById('mainHeading');
 
-            itemTypesOrder.forEach(itemType => {
-                const itemsOfType = jsonData[itemType];
-                if (!itemsOfType || itemsOfType.length === 0) {
-                    return; // Skip if no items for this type
-                }
+        async function loadGameData(gameId) {
+            appDiv.innerHTML = ''; // Clear previous content
 
-                const itemTypeName = itemType.charAt(0).toUpperCase() + itemType.slice(1); // Capitalize first letter
+            let gameTitle = '';
+            let jsonPath = '';
 
-                const tableContainer = document.createElement('div');
-                tableContainer.classList.add('table-container');
+            if (gameId === 'dw3') {
+                gameTitle = 'Dragon Quest III';
+                jsonPath = 'dat/dw3.json';
+            } else if (gameId === 'dw4') {
+                gameTitle = 'Dragon Quest IV';
+                jsonPath = 'dat/dw4.json';
+            } else {
+                console.error('Unknown game ID:', gameId);
+                mainHeading.textContent = 'Error: Invalid Game Selection';
+                return;
+            }
 
-                const heading = document.createElement('h2');
-                heading.classList.add('item-type-heading');
-                heading.textContent = `${itemTypeName} Compatibility`;
-                tableContainer.appendChild(heading);
+            mainHeading.textContent = `${gameTitle} Item Compatibility`;
 
-                const table = document.createElement('table');
-                const thead = document.createElement('thead');
-                const tbody = document.createElement('tbody');
+            try {
+                const jsonData = await safeFetchJson(jsonPath);
+                const classes = jsonData.classes;
 
-                // Create table header row
-                const headerRow = document.createElement('tr');
-                const emptyTh = document.createElement('th');
-                emptyTh.textContent = 'Class \\ Item'; // Corner cell
-                headerRow.appendChild(emptyTh);
+                // Define the order of item types for display
+                const itemTypesOrder = ['armor', 'shields', 'helmets', 'weapons'];
 
-                itemsOfType.forEach(item => {
-                    const th = document.createElement('th');
-                    th.textContent = item.name;
-                    headerRow.appendChild(th);
-                });
-                thead.appendChild(headerRow);
-                table.appendChild(thead);
+                itemTypesOrder.forEach(itemType => {
+                    const itemsOfType = jsonData[itemType];
+                    if (!itemsOfType || itemsOfType.length === 0) {
+                        return; // Skip if no items for this type
+                    }
 
-                // Create table body rows
-                classes.forEach(cls => {
-                    const row = document.createElement('tr');
-                    const classNameTd = document.createElement('td');
-                    classNameTd.classList.add('class-name');
-                    classNameTd.textContent = cls.name;
-                    classNameTd.style.backgroundColor = cls.color; // Set class color
-                    row.appendChild(classNameTd);
+                    const itemTypeName = itemType.charAt(0).toUpperCase() + itemType.slice(1); // Capitalize first letter
+
+                    const tableContainer = document.createElement('div');
+                    tableContainer.classList.add('table-container');
+
+                    const heading = document.createElement('h2');
+                    heading.classList.add('item-type-heading');
+                    heading.textContent = `${itemTypeName} Compatibility`;
+                    tableContainer.appendChild(heading);
+
+                    const table = document.createElement('table');
+                    const thead = document.createElement('thead');
+                    const tbody = document.createElement('tbody');
+
+                    // Create table header row
+                    const headerRow = document.createElement('tr');
+                    const emptyTh = document.createElement('th');
+                    emptyTh.textContent = 'Class \\ Item'; // Corner cell
+                    headerRow.appendChild(emptyTh);
 
                     itemsOfType.forEach(item => {
-                        const cell = document.createElement('td');
-                        // Check if the current class (cls) has the current item (item.name) in its allowed list for this item type
-                        const isCompatible = cls[itemType] && cls[itemType].includes(item.name);
-                        const isCursed = item.cursed !== null;
-                        
-                        if (isCompatible) {
-                            cell.textContent = item.name;
-                            if (isCursed) {
-                              cell.classList.add('item-cursed');
-                            } else {
-                              cell.classList.add('item-available');
-                            }
-                        } else {
-                            // cell.textContent = '—'; // Or leave empty
-                            cell.classList.add('item-not-available');
-                        }
-                        row.appendChild(cell);
+                        const th = document.createElement('th');
+                        th.textContent = item.name;
+                        headerRow.appendChild(th);
                     });
-                    tbody.appendChild(row);
+                    thead.appendChild(headerRow);
+                    table.appendChild(thead);
+
+                    // Create table body rows
+                    classes.forEach(cls => {
+                        const row = document.createElement('tr');
+                        const classNameTd = document.createElement('td');
+                        classNameTd.classList.add('class-name');
+                        classNameTd.textContent = cls.name;
+                        classNameTd.style.backgroundColor = cls.color; // Set class color (if defined in JSON data)
+                        row.appendChild(classNameTd);
+
+                        itemsOfType.forEach(item => {
+                            const cell = document.createElement('td');
+                            // Check if the current class (cls) has the current item (item.name) in its allowed list for this item type
+                            const isCompatible = cls[itemType] && cls[itemType].includes(item.name);
+                            const isCursed = item.cursed !== null;
+                            
+                            if (isCompatible) {
+                                cell.textContent = item.name;
+                                if (isCursed) {
+                                  cell.classList.add('item-cursed');
+                                } else {
+                                  cell.classList.add('item-available');
+                                }
+                            } else {
+                                // cell.textContent = '—'; // Or leave empty
+                                cell.classList.add('item-not-available');
+                            }
+                            row.appendChild(cell);
+                        });
+                        tbody.appendChild(row);
+                    });
+                    table.appendChild(tbody);
+                    tableContainer.appendChild(table);
+                    appDiv.appendChild(tableContainer);
                 });
-                table.appendChild(tbody);
-                tableContainer.appendChild(table);
-                appDiv.appendChild(tableContainer);
+            } catch (error) {
+                appDiv.innerHTML = `<p style="color: red; text-align: center;">Error loading data for ${gameTitle}: ${error.message}</p>`;
+                console.error('Error loading game data:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load initial data based on the default selected option
+            loadGameData(gameSelection.value);
+
+            // Add event listener for dropdown changes
+            gameSelection.addEventListener('change', (event) => {
+                loadGameData(event.target.value);
             });
         });
     </script>
