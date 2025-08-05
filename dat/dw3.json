@@ -62,7 +62,7 @@
     {
       "name": "Clothes",
       "price": 10,
-      "def": 4,
+      "defense": 4,
       "cursed": null,
       "special": null,
       "locations": ["Aliahan", "Soo", "Tower of Arp", "Hork"]
@@ -70,7 +70,7 @@
     {
       "name": "Wayfayer's Clothes",
       "price": 70,
-      "def": 8,
+      "defense": 8,
       "cursed": null,
       "special": null,
       "locations": ["Aliahan", "Cave on the Promontory", "Isis", "Barnabas", "Army Crab"]
@@ -78,7 +78,7 @@
     {
       "name": "Animal Suit",
       "price": 350,
-      "def": 8,
+      "defense": 8,
       "cursed": null,
       "special": "Makes the character look like a cat, but has no practical value",
       "locations": ["Cave of Samanao", "Vampire Cat", "Catula"]
@@ -86,7 +86,7 @@
     {
       "name": "Training Suit",
       "price": 80,
-      "def": 10,
+      "defense": 10,
       "cursed": null,
       "special": null,
       "locations": ["Reeve", "Cave of Norud"]
@@ -94,7 +94,7 @@
     {
       "name": "Leather Armor",
       "price": 150,
-      "def": 12,
+      "defense": 12,
       "cursed": null,
       "special": null,
       "locations": ["Aliahan", "Reeve", "Romaly"]
@@ -102,7 +102,7 @@
     {
       "name": "Shell Armor",
       "price": 300,
-      "def": 16,
+      "defense": 16,
       "cursed": null,
       "special": null,
       "locations": ["Romaly", "Crabus"]
@@ -110,7 +110,7 @@
     {
       "name": "Chain Mail",
       "price": 480,
-      "def": 20,
+      "defense": 20,
       "cursed": null,
       "special": null,
       "locations": ["Romaly", "Assaram"]
@@ -118,7 +118,7 @@
     {
       "name": "Cloak of Evasion",
       "price": 2900,
-      "def": 20,
+      "defense": 20,
       "cursed": null,
       "special": "Wearer has an additional 20% chance to evade physical attacks",
       "locations": ["Noaniels", "Assaram", "Isis", "Muor", "Lancel", "Rimuldar", "Hunter Fly", "Ghoul", "Hades' Condor"]
@@ -126,7 +126,7 @@
     {
       "name": "Iron Apron",
       "price": 700,
-      "def": 22,
+      "defense": 22,
       "cursed": null,
       "special": null,
       "locations": ["Romaly", "Kanave", "Assaram"]
@@ -134,7 +134,7 @@
     {
       "name": "Fighting Suit",
       "price": 800,
-      "def": 23,
+      "defense": 23,
       "cursed": null,
       "special": null,
       "locations": ["Kanave", "Aliahan", "Muor", "Soo", "Tentacles"]
@@ -142,7 +142,7 @@
     {
       "name": "Half Plate Armor",
       "price": 1100,
-      "def": 25,
+      "defense": 25,
       "cursed": null,
       "special": null,
       "locations": ["Kanave", "Assaram", "Isis", "Infernus Knight"]
@@ -150,7 +150,7 @@
     {
       "name": "Flashy Clothes",
       "price": 1300,
-      "def": 28,
+      "defense": 28,
       "cursed": null,
       "special": null,
       "locations": ["Pyramid", "Soo", "Dancing Jewel"]
@@ -158,7 +158,7 @@
     {
       "name": "Sacred Robe",
       "price": 4400,
-      "def": 30,
+      "defense": 30,
       "cursed": null,
       "special": "Reduces all magic damage down to 2/3.",
       "locations": ["Tedanki", "Lancel", "New Town", "Tantegel", "Hauksness"]
@@ -166,7 +166,7 @@
     {
       "name": "Full Plate Armor",
       "price": 2400,
-      "def": 32,
+      "defense": 32,
       "cursed": null,
       "special": null,
       "locations": ["Isis", "Muor", "Lethal Knight"]
@@ -174,7 +174,7 @@
     {
       "name": "Angel's Robe",
       "price": 3000,
-      "def": 35,
+      "defense": 35,
       "cursed": null,
       "special": "Halves the chance of being hit by Defeat & Beat spells",
       "locations": ["Elf Village", "Tantegel"]
@@ -182,7 +182,7 @@
     {
       "name": "Water Flying Clothes",
       "price": 12500,
-      "def": 40,
+      "defense": 40,
       "cursed": null,
       "special": "Reduces all magic and breath damage down to 2/3.",
       "locations": ["Kol"]
@@ -190,7 +190,7 @@
     {
       "name": "Magic Armor",
       "price": 5800,
-      "def": 40,
+      "defense": 40,
       "cursed": null,
       "special": "Reduces all magic damage down to 2/3.",
       "locations": ["Tedanki", "Samanao", "New Town", "Rimuldar"]
@@ -198,7 +198,7 @@
     {
       "name": "Dragon Mail",
       "price": 9800,
-      "def": 45,
+      "defense": 45,
       "cursed": null,
       "special": "Reduces fire breath damage down to 2/3.",
       "locations": ["New Town", "Tantegel", "Hauksness", "Kol", "King Hydra"]
@@ -206,7 +206,7 @@
     {
       "name": "Armor of Terrafirma",
       "price": 99999,
-      "def": 50,
+      "defense": 50,
       "cursed": null,
       "special": "Cannot be sold or dropped.",
       "locations": ["Navel of the Earth", "Stone Hulk"]
@@ -214,7 +214,7 @@
     {
       "name": "Swordedge Armor",
       "price": 99999,
-      "def": 55,
+      "defense": 55,
       "cursed": null,
       "special": "Reflects 50% + 1 of physical attack damage back at the enemy. Cannot be sold or dropped.",
       "locations": ["Cave of Necrogond"]
@@ -222,7 +222,7 @@
     {
       "name": "Armor of Hades",
       "price": 7000,
-      "def": 65,
+      "defense": 65,
       "cursed": "33% chance to immobolize wearer every time Attack command is used. Reduces all magic damage down to 1/4 + 1.",
       "special": null,
       "locations": ["Cave Southwest of Tantegel"]
@@ -230,7 +230,7 @@
     {
       "name": "Armor of Radiance",
       "price": 99999,
-      "def": 75,
+      "defense": 75,
       "cursed": null,
       "special": "Restores 1HP per step, reduces all magic and breath damage down to 2/3. Cannot be sold or dropped.",
       "locations": ["Tower West of Kol"]
@@ -240,7 +240,7 @@
     {
       "name": "Shield of Sorrow",
       "price": 10,
-      "def": 35,
+      "defense": 35,
       "cursed": "Physical attack damage reduced to 1/2 if neither the Cloak of Evasion or Swordedge Armor are being worn. Another random party member will then receive the other half of the damage, if the Shield of Sorrow user isn't wearing a Cloak of Evasion.",
       "special": null,
       "locations": ["Lionhead", "Leona", "Lionroar", "Baramos Bomus"]
@@ -248,7 +248,7 @@
     {
       "name": "Leather Shield",
       "price": 90,
-      "def": 4,
+      "defense": 4,
       "cursed": null,
       "special": null,
       "locations": ["Aliahan", "Reeve", "Rammore"]
@@ -256,7 +256,7 @@
     {
       "name": "Bronze Shield",
       "price": 180,
-      "def": 7,
+      "defense": 7,
       "cursed": null,
       "special": null,
       "locations": ["Romaly", "Kanave", "Assaram", "Tedanki", "Infernus Crab"]
@@ -264,7 +264,7 @@
     {
       "name": "Iron Shield",
       "price": 700,
-      "def": 12,
+      "defense": 12,
       "cursed": null,
       "special": null,
       "locations": ["Kanave", "Assaram", "Isis"]
@@ -272,7 +272,7 @@
     {
       "name": "Silver Shield",
       "price": 8800,
-      "def": 30,
+      "defense": 30,
       "cursed": null,
       "special": null,
       "locations": ["Samanao", "New Town", "Kol", "Rimuldar"]
@@ -280,7 +280,7 @@
     {
       "name": "Shield of Strength",
       "price": 15000,
-      "def": 40,
+      "defense": 40,
       "cursed": null,
       "special": "Item: casts Healmore. Can be used as an item by ANY class.",
       "locations": ["Hauksness"]
@@ -288,7 +288,7 @@
     {
       "name": "Shield of Heroes",
       "price": 99999,
-      "def": 50,
+      "defense": 50,
       "cursed": null,
       "special": "All breath damage reduced down to 2/3. Cannot be sold or dropped.",
       "locations": ["Cave NW of Tantegel"]
@@ -298,7 +298,7 @@
     {
       "name": "Leather Helmet",
       "price": 80,
-      "def": 2,
+      "defense": 2,
       "cursed": null,
       "special": null,
       "locations": ["Reeve", "Tower of Najima", "Romaly", "Isis", "New Town", "Spiked Hare", "Giant Anteater", "Merzoncian"]
@@ -306,7 +306,7 @@
     {
       "name": "Golden Crown",
       "price": 99999,
-      "def": 6,
+      "defense": 6,
       "cursed": null,
       "special": "Plot item. Cannot be sold or dropped.",
       "locations": ["Kandar"]
@@ -314,7 +314,7 @@
     {
       "name": "Mysterious Hat",
       "price": 8,
-      "def": 8,
+      "defense": 8,
       "cursed": null,
       "special": "Spells cost 75% + 1 of original amount",
       "locations": ["Glacier Basher", "Magiwyvern", "Barog"]
@@ -322,7 +322,7 @@
     {
       "name": "Turban",
       "price": 160,
-      "def": 8,
+      "defense": 8,
       "cursed": null,
       "special": null,
       "locations": ["Reeve", "Assaram"]
@@ -330,7 +330,7 @@
     {
       "name": "Iron Helmet",
       "price": 2000,
-      "def": 16,
+      "defense": 16,
       "cursed": null,
       "special": null,
       "locations": ["Assaram", "Tower of Garuna", "Tortragon"]
@@ -338,7 +338,7 @@
     {
       "name": "Iron Mask",
       "price": 3500,
-      "def": 25,
+      "defense": 25,
       "cursed": null,
       "special": null,
       "locations": ["Tedanki", "Muor", "Lancel", "Kol", "Rimuldar"]
@@ -348,7 +348,7 @@
     {
       "name": "Poison Needle",
       "price": 10,
-      "def": 1,
+      "attack": 1,
       "cursed": null,
       "special": "12% chance of instant kill",
       "locations": ["Kanave", "Soo", "Man-Eater Moth", "Executioner"]
@@ -356,7 +356,7 @@
     {
       "name": "Cypress Stick",
       "price": 5,
-      "def": 2,
+      "attack": 2,
       "cursed": null,
       "special": null,
       "locations": ["Aliahan", "Soo", "Kandar", "Kandar Henchman", "Man-Eater Chest", "Slime Snaii"]
@@ -364,7 +364,7 @@
     {
       "name": "Falcon Sword",
       "price": 25000,
-      "def": 5,
+      "attack": 5,
       "cursed": null,
       "special": "Attacks twice per round; useful against Metal Babbles.",
       "locations": ["Tantegel", "Rimuldar"]
@@ -372,7 +372,7 @@
     {
       "name": "Club",
       "price": 30,
-      "def": 7,
+      "attack": 7,
       "cursed": null,
       "special": null,
       "locations": ["Aliahan", "Kanave", "Cave of Norud", "Soo", "Troll"]
@@ -380,7 +380,7 @@
     {
       "name": "Copper Sword",
       "price": 100,
-      "def": 12,
+      "attack": 12,
       "cursed": null,
       "special": null,
       "locations": ["Aliahan", "Reeve", "Rogue Knight"]
@@ -388,7 +388,7 @@
     {
       "name": "Magic Knife",
       "price": 200,
-      "def": 14,
+      "attack": 14,
       "cursed": null,
       "special": null,
       "locations": ["Reeve", "Cave of Enticement", "Cave of Dreams", "Assaram", "Lancel", "Humanabat"]
@@ -396,7 +396,7 @@
     {
       "name": "Wizard's Wand",
       "price": 1500,
-      "def": 15,
+      "attack": 15,
       "cursed": null,
       "special": "Item: casts Blaze",
       "locations": ["Noaniels", "Samanao", "Tantegel"]
@@ -404,7 +404,7 @@
     {
       "name": "Staff of Rain",
       "price": 99999,
-      "def": 16,
+      "attack": 16,
       "cursed": null,
       "special": "Item: casts StopSpell. Needed to trade for Rainbow Drop. Cannot be sold or dropped.",
       "locations": ["Shrine South of Cantlin"]
@@ -412,7 +412,7 @@
     {
       "name": "Thorn Whip",
       "price": 320,
-      "def": 18,
+      "attack": 18,
       "cursed": null,
       "special": null,
       "locations": ["Reeve", "Soo", "King Froggore", "Terror Shadow"]
@@ -420,7 +420,7 @@
     {
       "name": "Chain Sickle",
       "price": 550,
-      "def": 24,
+      "attack": 24,
       "cursed": null,
       "special": null,
       "locations": ["Reeve", "Romaly", "Assaram", "Eliminator"]
@@ -428,7 +428,7 @@
     {
       "name": "Iron Spear",
       "price": 750,
-      "def": 28,
+      "attack": 28,
       "cursed": null,
       "special": null,
       "locations": ["Romaly", "Kanave", "Assaram", "Lancel", "Tonguebear"]
@@ -436,7 +436,7 @@
     {
       "name": "Iron Claw",
       "price": 770,
-      "def": 30,
+      "attack": 30,
       "cursed": null,
       "special": null,
       "locations": ["Kanave", "Samanao", "Garuda", "Goopi"]
@@ -444,7 +444,7 @@
     {
       "name": "Staff of Thunder",
       "price": 2500,
-      "def": 30,
+      "attack": 30,
       "cursed": null,
       "special": "Item: casts Firebane. Any class can use it from item menu.",
       "locations": ["Soo"]
@@ -452,7 +452,7 @@
     {
       "name": "Broad Sword",
       "price": 1500,
-      "def": 33,
+      "attack": 33,
       "cursed": null,
       "special": null,
       "locations": ["Romaly", "Kanave", "Assaram", "Isis", "Kol", "Skeleton"]
@@ -460,7 +460,7 @@
     {
       "name": "Staff of Reflection",
       "price": 7000,
-      "def": 33,
+      "attack": 33,
       "cursed": null,
       "special": "Item: casts Bounce",
       "locations": ["Archmages"]
@@ -468,7 +468,7 @@
     {
       "name": "Staff of Judgement",
       "price": 2700,
-      "def": 35,
+      "attack": 35,
       "cursed": null,
       "special": "Item: casts Infernos",
       "locations": ["Muor", "Samanao", "New Town", "Tantegel", "Hauksness"]
@@ -476,7 +476,7 @@
     {
       "name": "Battle Axe",
       "price": 2500,
-      "def": 40,
+      "attack": 40,
       "cursed": null,
       "special": null,
       "locations": ["Assaram", "Isis", "Lancel", "Avenger"]
@@ -484,7 +484,7 @@
     {
       "name": "Giant Shears",
       "price": 3700,
-      "def": 48,
+      "attack": 48,
       "cursed": null,
       "special": null,
       "locations": ["Assaram", "Isis"]
@@ -492,7 +492,7 @@
     {
       "name": "Sword of Gaia",
       "price": 99999,
-      "def": 48,
+      "attack": 48,
       "cursed": null,
       "special": "Needed to open the path to Necrogond. Cannot be sold or dropped.",
       "locations": ["Shrine Jail"]
@@ -500,7 +500,7 @@
     {
       "name": "Sword of Illusion",
       "price": 99999,
-      "def": 50,
+      "attack": 50,
       "cursed": null,
       "special": "Item: casts Chaos. Talk to a woman south of the entrance after Baramos is defeated. Female only. Cannot be sold or dropped.",
       "locations": ["Portoga (after Baramos's Death)", "Winged Demon"]
@@ -508,7 +508,7 @@
     {
       "name": "Staff of Force",
       "price": 2500,
-      "def": 55,
+      "attack": 55,
       "cursed": null,
       "special": "Uses 3MP per attack",
       "locations": ["Assaram", "Tedanki"]
@@ -516,7 +516,7 @@
     {
       "name": "Sledge Hammer",
       "price": 6500,
-      "def": 55,
+      "attack": 55,
       "cursed": null,
       "special": null,
       "locations": ["Tedanki", "Muor", "Lancel", "Kol"]
@@ -524,7 +524,7 @@
     {
       "name": "Golden Claw",
       "price": 15000,
-      "def": 55,
+      "attack": 55,
       "cursed": "It dramatically increases encounter rate, even if unequipped.",
       "special": null,
       "locations": ["Pyramid", "Gold Basher"]
@@ -532,7 +532,7 @@
     {
       "name": "Orochi Sword",
       "price": 1000,
-      "def": 63,
+      "attack": 63,
       "cursed": null,
       "special": "Item: casts Defense",
       "locations": ["Orochi"]
@@ -540,7 +540,7 @@
     {
       "name": "Zombie Slasher",
       "price": 9800,
-      "def": 65,
+      "attack": 65,
       "cursed": null,
       "special": "Deals extra damage to undead enemies",
       "locations": ["Tedanki", "Samanao", "New Town", "Hauksness"]
@@ -548,7 +548,7 @@
     {
       "name": "Dragon Killer",
       "price": 15000,
-      "def": 77,
+      "attack": 77,
       "cursed": null,
       "special": "Deals extra damage to dragon enemies, including the armored tortoises",
       "locations": ["Samanao", "New Town", "Tantegel"]
@@ -556,7 +556,7 @@
     {
       "name": "Snowblast Sword",
       "price": 15000,
-      "def": 80,
+      "attack": 80,
       "cursed": null,
       "special": "Item: casts Snowblast",
       "locations": ["Marauder", "Swordoid"]
@@ -564,7 +564,7 @@
     {
       "name": "Thunder Sword",
       "price": 7500,
-      "def": 85,
+      "attack": 85,
       "cursed": null,
       "special": "Item: casts Boom",
       "locations": ["Cave of Necrogond"]
@@ -572,7 +572,7 @@
     {
       "name": "Demon Axe",
       "price": 500,
-      "def": 90,
+      "attack": 90,
       "cursed": "It misses very often and 12.5% chance of critical hit.",
       "special": null,
       "locations": ["Castle of Baramos", "Mimic"]
@@ -580,7 +580,7 @@
     {
       "name": "Thor's Sword",
       "price": 43690,
-      "def": 95,
+      "attack": 95,
       "cursed": null,
       "special": "Item: casts Firevolt",
       "locations": ["Boss Troll", "Troll King", "Granite Titan"]
@@ -588,7 +588,7 @@
     {
       "name": "Multi-Edge Sword",
       "price": 5000,
-      "def": 100,
+      "attack": 100,
       "cursed": "Deals damage to both user and enemy",
       "special": null,
       "locations": ["Castle of Zoma", "Frost Cloud", "Elysium Bird"]
@@ -596,7 +596,7 @@
     {
       "name": "Sword of Destruction",
       "price": 45000,
-      "def": 110,
+      "attack": 110,
       "cursed": "The user gets stunned randomly",
       "special": null,
       "locations": ["Rimuldar", "Baramos Gonus"]
@@ -604,7 +604,7 @@
     {
       "name": "Sword of Kings",
       "price": 32767,
-      "def": 120,
+      "attack": 120,
       "cursed": null,
       "special": "Item: casts Firevolt. Sell Oricon to the item shop owner to get it.",
       "locations": ["Kol"]

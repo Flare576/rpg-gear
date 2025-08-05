@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DQ Item Compatibility</title>
-    <style>
+<style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
@@ -74,6 +68,68 @@
             border-bottom: 2px solid #3498db;
             padding-bottom: 5px;
         }
+
+        /* Tooltip styles */
+        .tooltip {
+            position: fixed;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+            z-index: 1000; /* Ensure it's on top */
+            max-width: 300px;
+            font-size: 0.9em;
+            display: none; /* Hidden by default */
+            flex-direction: column; /* For content layout */
+            gap: 5px; /* Spacing between info lines */
+            pointer-events: auto; /* Allow clicks on tooltip content */
+            user-select: text; /* Allow selecting text within the tooltip */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+        .tooltip.visible {
+            display: flex; /* Show when visible */
+        }
+        .tooltip-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .tooltip-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #2c3e50;
+        }
+        .tooltip-close {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #777;
+            cursor: pointer;
+            padding: 0 5px;
+            line-height: 1; /* Prevent extra space */
+        }
+        .tooltip-close:hover {
+            color: #333;
+        }
+        .tooltip-content p {
+            margin: 0; /* Remove default paragraph margin */
+            line-height: 1.4;
+        }
+        .tooltip-content span.label {
+            font-weight: bold;
+            color: #555;
+            margin-right: 5px;
+        }
+        .tooltip-cursed-note {
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -86,6 +142,20 @@
     </div>
     <h1 id="mainHeading"></h1>
     <div id="app"></div>
+
+    <div id="itemTooltip" class="tooltip">
+        <div class="tooltip-header">
+            <span class="tooltip-title"></span>
+            <button class="tooltip-close">&times;</button>
+        </div>
+        <div class="tooltip-content">
+            <p><span class="label">Type:</span> <span id="tooltipType"></span></p>
+            <p><span class="label">Attack:</span> <span id="tooltipAttack"></span></p>
+            <p><span class="label">Defense:</span> <span id="tooltipDefense"></span></p>
+            <p><span class="label">Effect:</span> <span id="tooltipEffect"></span></p>
+            <p class="tooltip-cursed-note" id="tooltipCursedNote" style="display: none;">This item is cursed!</p>
+        </div>
+    </div>
 
     <script>
         const version = 1;
@@ -102,8 +172,73 @@
         const gameSelection = document.getElementById('gameSelection');
         const mainHeading = document.getElementById('mainHeading');
 
+        let allItemsMap = new Map(); // To store all items for quick lookup
+
+        // Tooltip elements
+        const itemTooltip = document.getElementById('itemTooltip');
+        const tooltipTitle = itemTooltip.querySelector('.tooltip-title');
+        const tooltipType = itemTooltip.querySelector('#tooltipType');
+        const tooltipAttack = itemTooltip.querySelector('#tooltipAttack');
+        const tooltipDefense = itemTooltip.querySelector('#tooltipDefense');
+        const tooltipEffect = itemTooltip.querySelector('#tooltipEffect');
+        const tooltipCursedNote = itemTooltip.querySelector('#tooltipCursedNote');
+        const tooltipCloseButton = itemTooltip.querySelector('.tooltip-close');
+
+        function showTooltip(itemName, targetElement, event) {
+            const item = allItemsMap.get(itemName);
+            if (!item) {
+                console.warn('Item not found for tooltip:', itemName);
+                return;
+            }
+
+            // Populate tooltip
+            tooltipTitle.textContent = item.name;
+            tooltipType.textContent = item.type.charAt(0).toUpperCase() + item.type.slice(1);
+            tooltipAttack.textContent = item.attack !== undefined ? item.attack : 'N/A';
+            tooltipDefense.textContent = item.defense !== undefined ? item.defense : 'N/A';
+            tooltipEffect.textContent = item.special || 'None';
+            tooltipCursedNote.style.display = item.cursed ? 'block' : 'none';
+
+            // Position tooltip
+            const rect = targetElement.getBoundingClientRect();
+            let top = rect.bottom + 10; // 10px margin below element, relative to viewport
+            let left = rect.left; // relative to viewport
+
+            // Adjust position to stay within viewport
+            // Check if tooltip overflows right
+            if (left + itemTooltip.offsetWidth > window.innerWidth - 10) { // 10px margin from right
+                left = window.innerWidth - itemTooltip.offsetWidth - 10;
+                if (left < 10) { // If still overflows, align to left edge (10px margin)
+                    left = 10;
+                }
+            }
+
+            // Check if tooltip overflows bottom
+            if (top + itemTooltip.offsetHeight > window.innerHeight - 10) { // 10px margin from bottom
+                // If overflows bottom, try placing above the element
+                top = rect.top - itemTooltip.offsetHeight - 10;
+                if (top < 10) { // If still overflows top, place at top of viewport (10px margin)
+                    top = 10;
+                }
+            }
+
+            itemTooltip.style.left = `${left}px`;
+            itemTooltip.style.top = `${top}px`;
+            itemTooltip.classList.add('visible');
+
+            // Stop event propagation to prevent immediate hiding from document click
+            if (event) {
+                event.stopPropagation();
+            }
+        }
+
+        function hideTooltip() {
+            itemTooltip.classList.remove('visible');
+        }
+
         async function loadGameData(gameId) {
             appDiv.innerHTML = ''; // Clear previous content
+            allItemsMap.clear(); // Clear map for new game data
 
             let gameTitle = '';
             let jsonPath = '';
@@ -128,6 +263,16 @@
 
                 // Define the order of item types for display
                 const itemTypesOrder = ['armor', 'shields', 'helmets', 'weapons'];
+
+                // Populate allItemsMap
+                itemTypesOrder.forEach(itemType => {
+                    const itemsOfType = jsonData[itemType];
+                    if (itemsOfType) {
+                        itemsOfType.forEach(item => {
+                            allItemsMap.set(item.name, { ...item, type: itemType }); // Add type for display
+                        });
+                    }
+                });
 
                 itemTypesOrder.forEach(itemType => {
                     const itemsOfType = jsonData[itemType];
@@ -158,6 +303,9 @@
                     itemsOfType.forEach(item => {
                         const th = document.createElement('th');
                         th.textContent = item.name;
+                        th.style.cursor = 'pointer'; // Indicate clickability
+                        th.setAttribute('data-item-name', item.name); // Store item name
+                        th.addEventListener('click', (e) => showTooltip(item.name, th, e));
                         headerRow.appendChild(th);
                     });
                     thead.appendChild(headerRow);
@@ -185,6 +333,9 @@
                                 } else {
                                   cell.classList.add('item-available');
                                 }
+                                cell.style.cursor = 'pointer'; // Indicate clickability
+                                cell.setAttribute('data-item-name', item.name); // Store item name
+                                cell.addEventListener('click', (e) => showTooltip(item.name, cell, e));
                             } else {
                                 // cell.textContent = '—'; // Or leave empty
                                 cell.classList.add('item-not-available');
@@ -209,7 +360,19 @@
 
             // Add event listener for dropdown changes
             gameSelection.addEventListener('change', (event) => {
+                hideTooltip(); // Hide tooltip when game changes
                 loadGameData(event.target.value);
+            });
+
+            // Add listener for close button
+            tooltipCloseButton.addEventListener('click', hideTooltip);
+
+            // Add event listener to hide tooltip on outside click/tap
+            document.addEventListener('click', (event) => {
+                // If the tooltip is visible AND the click was NOT inside the tooltip itself
+                if (itemTooltip.classList.contains('visible') && !itemTooltip.contains(event.target)) {
+                    hideTooltip();
+                }
             });
         });
     </script>

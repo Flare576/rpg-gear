@@ -62,7 +62,7 @@
     {
       "name": "Wayfarer's Clothes",
       "price": 70,
-      "def": 8,
+      "defense": 8,
       "cursed": null,
       "special": null,
       "locations": ["Strathbaile", "Woodcutter's Cabin", "Lakanaba"]
@@ -70,7 +70,7 @@
     {
       "name": "Leather Armor",
       "price": 150,
-      "def": 12,
+      "defense": 12,
       "cursed": null,
       "special": null,
       "locations": ["Endor", "Aubout du Monde"]
@@ -78,7 +78,7 @@
     {
       "name": "Training Attire",
       "price": 80,
-      "def": 10,
+      "defense": 10,
       "cursed": null,
       "special": null,
       "locations": ["Endor", "Aubout du Monde"]
@@ -86,7 +86,7 @@
     {
       "name": "Silk Robe",
       "price": 200,
-      "def": 13,
+      "defense": 13,
       "cursed": null,
       "special": null,
       "locations": ["Endor", "Aubout du Monde"]
@@ -94,7 +94,7 @@
     {
       "name": "Chain Mail",
       "price": 480,
-      "def": 20,
+      "defense": 20,
       "cursed": null,
       "special": null,
       "locations": ["Endor", "Mintos"]
@@ -102,7 +102,7 @@
     {
       "name": "Iron Apron",
       "price": 700,
-      "def": 22,
+      "defense": 22,
       "cursed": null,
       "special": "Torneko only.",
       "locations": ["Mintos", "Bonmalmo"]
@@ -110,7 +110,7 @@
     {
       "name": "Iron Armor",
       "price": 1000,
-      "def": 25,
+      "defense": 25,
       "cursed": null,
       "special": null,
       "locations": ["Mintos", "Porthaven"]
@@ -118,7 +118,7 @@
     {
       "name": "Dancer's Costume",
       "price": 1300,
-      "def": 28,
+      "defense": 28,
       "cursed": null,
       "special": "Female only.",
       "locations": ["Porthaven", "Burland", "Desert Bazaar"]
@@ -126,7 +126,7 @@
     {
       "name": "Magic Robe",
       "price": 4000,
-      "def": 30,
+      "defense": 30,
       "cursed": null,
       "special": "Reduces magic damage.",
       "locations": ["Porthaven", "Ascantha"]
@@ -134,7 +134,7 @@
     {
       "name": "Full Plate Armor",
       "price": 2300,
-      "def": 32,
+      "defense": 32,
       "cursed": null,
       "special": null,
       "locations": ["Ascantha", "Concheim"]
@@ -142,7 +142,7 @@
     {
       "name": "Spiked Armor",
       "price": 3500,
-      "def": 35,
+      "defense": 35,
       "cursed": null,
       "special": "Deals small damage to attacker on contact.",
       "locations": ["Concheim", "Strathbaile"]
@@ -150,7 +150,7 @@
     {
       "name": "Dragon Mail",
       "price": 9800,
-      "def": 45,
+      "defense": 45,
       "cursed": null,
       "special": "Reduces fire/ice breath damage.",
       "locations": ["Femiscyra", "Riverton", "Zenithia"]
@@ -158,7 +158,7 @@
     {
       "name": "Water Flying Clothes",
       "price": 12500,
-      "def": 40,
+      "defense": 40,
       "cursed": null,
       "special": "Reduces magic/breath damage.",
       "locations": ["Canaletto", "Riverton"]
@@ -166,7 +166,7 @@
     {
       "name": "Temperamental Armor",
       "price": 10000,
-      "def": 50,
+      "defense": 50,
       "cursed": "Can inflict Confusion on user.",
       "special": null,
       "locations": ["Secret of Evolution cave", "Lost Shrine"]
@@ -174,7 +174,7 @@
     {
       "name": "Liquid Metal Armor",
       "price": 15000,
-      "def": 50,
+      "defense": 50,
       "cursed": null,
       "special": "Greatly reduces magic/breath damage.",
       "locations": ["Femiscyra", "World Tree", "Zenithia", "Funky Fowl drop"]
@@ -182,7 +182,7 @@
     {
       "name": "Sage's Robe",
       "price": 13000,
-      "def": 40,
+      "defense": 40,
       "cursed": null,
       "special": "Reduces MP cost of spells by 25%.",
       "locations": ["Riverton", "Royal Crypt"]
@@ -190,7 +190,7 @@
     {
       "name": "Armour of Leona",
       "price": 99999,
-      "def": 55,
+      "defense": 55,
       "cursed": null,
       "special": "Heals HP per step. Hero/Ragnar only.",
       "locations": ["Funky Fowl drop"]
@@ -198,7 +198,7 @@
     {
       "name": "Angel's Leotard",
       "price": 99999,
-      "def": 60,
+      "defense": 60,
       "cursed": null,
       "special": "Reduces damage from instant death spells. Female only.",
       "locations": ["Royal Crypt"]
@@ -206,7 +206,7 @@
     {
       "name": "Robe of Serenity",
       "price": 99999,
-      "def": 45,
+      "defense": 45,
       "cursed": null,
       "special": "Reduces damage from all spells. Kiryl/Meena only.",
       "locations": ["Fountain of Purity"]
@@ -214,7 +214,7 @@
     {
       "name": "Armour of Orgo",
       "price": 99999,
-      "def": 70,
+      "defense": 70,
       "cursed": null,
       "special": "Reduces damage from magic/breath. Hero only.",
       "locations": ["Prison of the Underworld"]
@@ -222,7 +222,7 @@
     {
       "name": "Zenithian Armor",
       "price": 99999,
-      "def": 70,
+      "defense": 70,
       "cursed": null,
       "special": "Reduces damage from magic/breath. Essential plot item.",
       "locations": ["Zenithia Castle"]
@@ -232,7 +232,7 @@
     {
       "name": "Leather Shield",
       "price": 90,
-      "def": 4,
+      "defense": 4,
       "cursed": null,
       "special": null,
       "locations": ["Strathbaile", "Woodcutter's Cabin", "Lakanaba"]
@@ -240,7 +240,7 @@
     {
       "name": "Scale Shield",
       "price": 180,
-      "def": 7,
+      "defense": 7,
       "cursed": null,
       "special": null,
       "locations": ["Endor", "Mintos"]
@@ -248,7 +248,7 @@
     {
       "name": "Iron Shield",
       "price": 700,
-      "def": 12,
+      "defense": 12,
       "cursed": null,
       "special": null,
       "locations": ["Mintos", "Porthaven"]
@@ -256,7 +256,7 @@
     {
       "name": "Magic Shield",
       "price": 8800,
-      "def": 30,
+      "defense": 30,
       "cursed": null,
       "special": "Reduces magic damage.",
       "locations": ["Canaletto", "Riverton"]
@@ -264,7 +264,7 @@
     {
       "name": "Dragon Shield",
       "price": 15000,
-      "def": 40,
+      "defense": 40,
       "cursed": null,
       "special": "Reduces fire/ice breath damage.",
       "locations": ["Femiscyra", "Riverton"]
@@ -272,7 +272,7 @@
     {
       "name": "Liquid Metal Shield",
       "price": 15000,
-      "def": 50,
+      "defense": 50,
       "cursed": null,
       "special": "Reduces magic/breath damage significantly.",
       "locations": ["World Tree", "Zenithia", "Metal Slime Knight drop"]
@@ -280,7 +280,7 @@
     {
       "name": "Zenithian Shield",
       "price": 99999,
-      "def": 60,
+      "defense": 60,
       "cursed": null,
       "special": "Reduces magic/breath damage. Essential plot item.",
       "locations": ["Zenithia Castle"]
@@ -290,7 +290,7 @@
     {
       "name": "Leather Hat",
       "price": 80,
-      "def": 2,
+      "defense": 2,
       "cursed": null,
       "special": null,
       "locations": ["Strathbaile", "Woodcutter's Cabin", "Lakanaba"]
@@ -298,7 +298,7 @@
     {
       "name": "Pointy Hat",
       "price": 160,
-      "def": 8,
+      "defense": 8,
       "cursed": null,
       "special": null,
       "locations": ["Endor", "Mintos"]
@@ -306,7 +306,7 @@
     {
       "name": "Iron Helmet",
       "price": 2000,
-      "def": 16,
+      "defense": 16,
       "cursed": null,
       "special": null,
       "locations": ["Porthaven", "Ascantha"]
@@ -314,7 +314,7 @@
     {
       "name": "Iron Mask",
       "price": 3500,
-      "def": 25,
+      "defense": 25,
       "cursed": null,
       "special": null,
       "locations": ["Ascantha", "Concheim"]
@@ -322,7 +322,7 @@
     {
       "name": "Liquid Metal Helm",
       "price": 15000,
-      "def": 30,
+      "defense": 30,
       "cursed": null,
       "special": "Reduces magic/breath damage.",
       "locations": ["World Tree", "Zenithia", "Liquid Metal Slime drop"]
@@ -330,7 +330,7 @@
     {
       "name": "Zenithian Helm",
       "price": 99999,
-      "def": 30,
+      "defense": 30,
       "cursed": null,
       "special": "Essential plot item.",
       "locations": ["Rosehill"]
@@ -338,7 +338,7 @@
     {
       "name": "Helmet of Hades",
       "price": 7000,
-      "def": 40,
+      "defense": 40,
       "cursed": "Can inflict Curse on user.",
       "special": null,
       "locations": ["Hidden Prison"]
@@ -348,7 +348,7 @@
     {
       "name": "Cypress Stick",
       "price": 5,
-      "atk": 2,
+      "attack": 2,
       "cursed": null,
       "special": null,
       "locations": ["Start"]
@@ -356,7 +356,7 @@
     {
       "name": "Copper Sword",
       "price": 100,
-      "atk": 12,
+      "attack": 12,
       "cursed": null,
       "special": null,
       "locations": ["Strathbaile", "Lakanaba"]
@@ -364,7 +364,7 @@
     {
       "name": "Iron Lance",
       "price": 450,
-      "atk": 20,
+      "attack": 20,
       "cursed": null,
       "special": null,
       "locations": ["Endor", "Mintos"]
@@ -372,7 +372,7 @@
     {
       "name": "Steel Broadsword",
       "price": 1300,
-      "atk": 30,
+      "attack": 30,
       "cursed": null,
       "special": null,
       "locations": ["Mintos", "Porthaven"]
@@ -380,7 +380,7 @@
     {
       "name": "Battle Axe",
       "price": 2000,
-      "atk": 40,
+      "attack": 40,
       "cursed": null,
       "special": null,
       "locations": ["Porthaven", "Ascantha"]
@@ -388,7 +388,7 @@
     {
       "name": "Iron Claw",
       "price": 770,
-      "atk": 30,
+      "attack": 30,
       "cursed": null,
       "special": "Alena only.",
       "locations": ["Endor"]
@@ -396,7 +396,7 @@
     {
       "name": "Chain Whip",
       "price": 1100,
-      "atk": 28,
+      "attack": 28,
       "cursed": null,
       "special": "Hits a group of enemies. Female only.",
       "locations": ["Porthaven"]
@@ -404,7 +404,7 @@
     {
       "name": "Staff of Antimagic",
       "price": 1800,
-      "atk": 20,
+      "attack": 20,
       "cursed": null,
       "special": "Item: casts Fizzle.",
       "locations": ["Porthaven", "Ascantha"]
@@ -412,7 +412,7 @@
     {
       "name": "Poison Needle",
       "price": 10,
-      "atk": 1,
+      "attack": 1,
       "cursed": null,
       "special": "1/8 chance of instant kill.",
       "locations": ["Endor (Casino)"]
@@ -420,7 +420,7 @@
     {
       "name": "Razor-Wing Boomerang",
       "price": 2900,
-      "atk": 25,
+      "attack": 25,
       "cursed": null,
       "special": "Hits all enemies.",
       "locations": ["Ascantha"]
@@ -428,7 +428,7 @@
     {
       "name": "War Hammer",
       "price": 4200,
-      "atk": 50,
+      "attack": 50,
       "cursed": null,
       "special": null,
       "locations": ["Ascantha", "Concheim"]
@@ -436,7 +436,7 @@
     {
       "name": "Spiked Steel Whip",
       "price": 4500,
-      "atk": 45,
+      "attack": 45,
       "cursed": null,
       "special": "Hits a group of enemies.",
       "locations": ["Concheim", "Strathbaile"]
@@ -444,7 +444,7 @@
     {
       "name": "Dragon Killer",
       "price": 15000,
-      "atk": 77,
+      "attack": 77,
       "cursed": null,
       "special": "Deals extra damage to dragons.",
       "locations": ["Femiscyra", "Riverton"]
@@ -452,7 +452,7 @@
     {
       "name": "Staff of Thunder",
       "price": 2500,
-      "atk": 30,
+      "attack": 30,
       "cursed": null,
       "special": "Item: casts Sizz.",
       "locations": ["Strathbaile"]
@@ -460,7 +460,7 @@
     {
       "name": "Gigasteel Broadsword",
       "price": 6500,
-      "atk": 60,
+      "attack": 60,
       "cursed": null,
       "special": null,
       "locations": ["Riverton", "Royal Crypt"]
@@ -468,7 +468,7 @@
     {
       "name": "Fire Blade",
       "price": 13000,
-      "atk": 80,
+      "attack": 80,
       "cursed": null,
       "special": "Item: casts Sizzle. Deals extra fire damage.",
       "locations": ["Riverton"]
@@ -476,7 +476,7 @@
     {
       "name": "Ice Blade",
       "price": 13000,
-      "atk": 80,
+      "attack": 80,
       "cursed": null,
       "special": "Item: casts Crackle. Deals extra ice damage.",
       "locations": ["Riverton"]
@@ -484,7 +484,7 @@
     {
       "name": "Sword of Miracles",
       "price": 25000,
-      "atk": 100,
+      "attack": 100,
       "cursed": null,
       "special": "Heals user for 1/4 of damage dealt. Hero only.",
       "locations": ["Nadiria", "Estark's Lair"]
@@ -492,7 +492,7 @@
     {
       "name": "Falcon Blade",
       "price": 25000,
-      "atk": 10,
+      "attack": 10,
       "cursed": null,
       "special": "Attacks twice.",
       "locations": ["Endor (Casino Prize)", "Zenithia", "Final Dungeon"]
@@ -500,7 +500,7 @@
     {
       "name": "Golden Claw",
       "price": 15000,
-      "atk": 55,
+      "attack": 55,
       "cursed": "Increases encounter rate dramatically if in inventory.",
       "special": "Alena only.",
       "locations": ["Pyramid"]
@@ -508,7 +508,7 @@
     {
       "name": "Fire Claw",
       "price": 9800,
-      "atk": 60,
+      "attack": 60,
       "cursed": null,
       "special": "Deals extra fire damage. Alena/Maya only.",
       "locations": ["Royal Crypt"]
@@ -516,7 +516,7 @@
     {
       "name": "Hell Sabre",
       "price": 30000,
-      "atk": 110,
+      "attack": 110,
       "cursed": "Can inflict poison on user.",
       "special": null,
       "locations": ["Royal Crypt"]
@@ -524,7 +524,7 @@
     {
       "name": "Flail of Destruction",
       "price": 18000,
-      "atk": 105,
+      "attack": 105,
       "cursed": "Attacks random target including allies.",
       "special": null,
       "locations": ["Royal Crypt"]
@@ -532,7 +532,7 @@
     {
       "name": "Hela Hammer",
       "price": 13000,
-      "atk": 90,
+      "attack": 90,
       "cursed": "High chance to miss, high chance of critical hit.",
       "special": null,
       "locations": ["Royal Crypt"]
@@ -540,7 +540,7 @@
     {
       "name": "Sword of Gaia",
       "price": 99999,
-      "atk": 80,
+      "attack": 80,
       "cursed": null,
       "special": "Required to open path to Mamon. Hero only.",
       "locations": ["Mountain Bureas"]
@@ -548,7 +548,7 @@
     {
       "name": "Demon Spear",
       "price": 12000,
-      "atk": 90,
+      "attack": 90,
       "cursed": "Can inflict Sleep on user.",
       "special": "Small chance of instant death.",
       "locations": ["Mamon's Stronghold"]
@@ -556,7 +556,7 @@
     {
       "name": "Staff of Divine Wrath",
       "price": 9800,
-      "atk": 60,
+      "attack": 60,
       "cursed": null,
       "special": "Item: casts Boom.",
       "locations": ["Mountain Bureas"]
@@ -564,7 +564,7 @@
     {
       "name": "Staff of Salvation",
       "price": 15000,
-      "atk": 40,
+      "attack": 40,
       "cursed": null,
       "special": "Item: casts Multiheal.",
       "locations": ["Fountain of Purity"]
@@ -572,7 +572,7 @@
     {
       "name": "Staff of Revival",
       "price": 99999,
-      "atk": 30,
+      "attack": 30,
       "cursed": null,
       "special": "Item: casts Zing.",
       "locations": ["Fountain of Purity"]
@@ -580,7 +580,7 @@
     {
       "name": "Fan of Peace",
       "price": 10000,
-      "atk": 60,
+      "attack": 60,
       "cursed": null,
       "special": "Maya only.",
       "locations": ["Fountain of Purity"]
@@ -588,7 +588,7 @@
     {
       "name": "Flame Fan",
       "price": 15000,
-      "atk": 90,
+      "attack": 90,
       "cursed": null,
       "special": "Item: casts Sizz. Maya only.",
       "locations": ["Fountain of Purity"]
@@ -596,7 +596,7 @@
     {
       "name": "King's Sword",
       "price": 32767,
-      "atk": 120,
+      "attack": 120,
       "cursed": null,
       "special": "Item: casts Zap. Hero only.",
       "locations": ["Final Dungeon"]
@@ -604,7 +604,7 @@
     {
       "name": "Sphere of Silence",
       "price": 99999,
-      "atk": 50,
+      "attack": 50,
       "cursed": null,
       "special": "Item: casts Whack. Female only.",
       "locations": ["Fountain of Purity"]
@@ -612,7 +612,7 @@
     {
       "name": "Master Dragon Claw",
       "price": 99999,
-      "atk": 90,
+      "attack": 90,
       "cursed": null,
       "special": "Alena only.",
       "locations": ["Final Dungeon"]
