@@ -1,0 +1,709 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DQ3 Item Compatibility</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .table-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow-x: auto; /* Enable horizontal scrolling for wide tables */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            white-space: nowrap; /* Prevent text wrapping in cells */
+        }
+        th {
+            background-color: #e2e6e9;
+            color: #555;
+            position: sticky; /* Make headers sticky for horizontal scroll */
+            left: 0;
+            z-index: 1; /* Ensure header stays above content */
+        }
+        td.class-name {
+            background-color: #f9f9f9;
+            font-weight: bold;
+            position: sticky; /* Make class names sticky for horizontal scroll */
+            left: 0;
+            z-index: 1; /* Ensure class name stays above content */
+        }
+        th:first-child, td:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 2; /* Ensure corner cell and class names stay on top */
+            background-color: #e2e6e9; /* Match header background */
+        }
+        .item-available {
+            background-color: #e6ffe6; /* Light green for available items */
+        }
+        .item-not-available {
+            background-color: #ffe6e6; /* Light red for unavailable items */
+            color: #aaa;
+        }
+        .item-cursed {
+            background-color: #ffaaaa; /* Bright red for cursed items */
+            color: #aaa;
+        }
+        .item-type-heading {
+            font-size: 1.5em;
+            color: #34495e;
+            margin-top: 0;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dragon Quest III Item Compatibility</h1>
+    <div id="app"></div>
+
+    <script>
+        const jsonData = {
+  "classes": [
+    {
+      "name": "Hero",
+      "color": "#6495ed",
+      "armor": ["Clothes","Wayfayer's Clothes","Animal Suit","Leather Armor","Shell Armor","Chain Mail","Cloak of Evasion","Half Plate Armor","Full Plate Armor","Magic Armor","Dragon Mail","Armor of Terrafirma","Swordedge Armor","Armor of Hades","Armor of Radiance"],
+      "shields": ["Shield of Sorrow","Leather Shield","Bronze Shield","Iron Shield","Silver Shield","Shield of Strength","Shield of Heroes"],
+      "helmets": ["Leather Helmet","Golden Crown","Iron Helmet","Iron Mask"],
+      "weapons": ["Cypress Stick","Falcon Sword","Club","Copper Sword","Magic Knife","Thorn Whip","Chain Sickle","Iron Spear","Broad Sword","Battle Axe","Sword of Gaia","Orochi Sword","Zombie Slasher","Dragon Killer","Snowblast Sword","Thunder Sword","Thor's Sword","Multi-Edge Sword","Sword of Destruction","Sword of Kings"]
+    }, {
+      "name": "Soldier",
+      "color": "#ff0000",
+      "armor": ["Clothes","Wayfayer's Clothes","Animal Suit","Leather Armor","Shell Armor","Chain Mail","Cloak of Evasion","Fighting Suit","Half Plate Armor","Full Plate Armor","Magic Armor","Dragon Mail","Armor of Terrafirma","Swordedge Armor","Armor of Hades"],
+      "shields": ["Shield of Sorrow","Leather Shield","Bronze Shield","Iron Shield","Silver Shield","Shield of Strength"],
+      "helmets": ["Leather Helmet","Golden Crown","Iron Helmet","Iron Mask"],
+      "weapons": ["Cypress Stick","Club","Copper Sword","Magic Knife","Thorn Whip","Chain Sickle","Iron Spear","Broad Sword","Battle Axe","Giant Shears","Sword of Gaia","Sword of Illusion","Sledge Hammer","Orochi Sword","Zombie Slasher","Dragon Killer","Snowblast Sword","Thunder Sword","Demon Axe","Thor's Sword","Multi-Edge Sword","Sword of Destruction"]
+    }, {
+      "name": "Merchant",
+      "color": "#ffffe0",
+      "armor": ["Clothes","Wayfayer's Clothes","Animal Suit","Leather Armor","Shell Armor","Chain Mail","Cloak of Evasion","Iron Apron","Fighting Suit","Half Plate Armor"],
+      "shield": ["Leather Shield","Bronze Shield","Iron Shield"],
+      "helmet": ["Leather Helmet","Golden Crown","Mysterious Hat","Turban"],
+      "weapon": ["Cypress Stick","Club","Copper Sword","Thorn Whip","Chain Sickle","Iron Spear","Broad Sword","Battle Axe","Sword of Illusion","Zombie Slasher"]
+    }, {
+      "name": "Goof",
+      "color": "#ff00ff",
+      "armor": ["Clothes","Wayfayer's Clothes","Animal Suit","Training Suit","Cloak of Evasion","Flashy Clothes"],
+      "shields": ["Leather Shield"],
+      "helmets": ["Leather Helmet","Golden Crown","Mysterious Hat","Turban"],
+      "weapons": ["Cypress Stick","Club","Copper Sword","Magic Knife","Thorn Whip","Chain Sickle","Iron Spear","Battle Axe","Sword of Illusion"]
+    }, {
+      "name": "Pilgrim",
+      "color": "#ffffff",
+      "armor": ["Clothes","Wayfayer's Clothes","Animal Suit","Leather Armor","Shell Armor","Chain Mail","Cloak of Evasion","Sacred Robe","Angel's Robe","Magic Armor"],
+      "shields": ["Leather Shield","Bronze Shield","Silver Shield"],
+      "helmets": ["Leather Helmet","Golden Crown","Mysterious Hat","Iron Helmet"],
+      "weapons": ["Cypress Stick","Club","Copper Sword","Magic Knife","Staff of Rain","Chain Sickle","Iron Spear","Staff of Reflection","Staff of Judgement","Staff of Force","Zombie Slasher"]
+    }, {
+      "name": "Sage",
+      "color": "#00ff00",
+      "armor": ["Clothes","Wayfayer's Clothes","Animal Suit","Training Suit","Leather Armor","Shell Armor","Chain Mail","Cloak of Evasion","Fighting Suit","Sacred Robe","Angel's Robe","Magic Armor"],
+      "shields": ["Leather Shield","Bronze Shield","Silver Shield"],
+      "helmets": ["Leather Helmet","Golden Crown","Mysterious Hat","Iron Helmet"],
+      "weapons": ["Cypress Stick","Falcon Sword","Club","Copper Sword","Wizard's Wand","Staff of Rain","Chain Sickle","Iron Spear","Staff of Thunder","Broad Sword","Staff of Reflection","Staff of Judgement","Staff of Force","Zombie Slasher"]
+    }, {
+      "name": "Wizard",
+      "color": "#fff2cc",
+      "armor": ["Clothes","Wayfayer's Clothes","Animal Suit","Cloak of Evasion","Angel's Robe","Water Flying Clothes"],
+      "shields": [],
+      "helmets": ["Leather Helmet","Golden Crown","Mysterious Hat"],
+      "weapons": ["Poison Needle","Cypress Stick","Magic Knife","Wizard's Wand","Staff of Rain","Staff of Thunder","Staff of Reflection","Staff of Force"]
+    }, {
+      "name": "Fighter",
+      "color": "#ea9999",
+      "armor": ["Clothes","Animal Suit","Training Suit","Cloak of Evasion","Fighting Suit"],
+      "shields": [],
+      "helmets": [],
+      "weapons": ["Cypress Stick","Club","Copper Sword","Chain Sickle","Iron Spear","Iron Claw","Golden Claw"]
+    }
+  ],
+  "armor": [
+    {
+      "name": "Clothes",
+      "price": 10,
+      "def": 4,
+      "special": null,
+      "locations": ["Aliahan", "Soo", "Tower of Arp", "Hork"]
+    },
+    {
+      "name": "Wayfayer's Clothes",
+      "price": 70,
+      "def": 8,
+      "special": null,
+      "locations": ["Aliahan", "Cave on the Promontory", "Isis", "Barnabas", "Army Crab"]
+    },
+    {
+      "name": "Animal Suit",
+      "price": 350,
+      "def": 8,
+      "special": "Makes the character look like a cat, but has no practical value",
+      "locations": ["Cave of Samanao", "Vampire Cat", "Catula"]
+    },
+    {
+      "name": "Training Suit",
+      "price": 80,
+      "def": 10,
+      "special": null,
+      "locations": ["Reeve", "Cave of Norud"]
+    },
+    {
+      "name": "Leather Armor",
+      "price": 150,
+      "def": 12,
+      "special": null,
+      "locations": ["Aliahan", "Reeve", "Romaly"]
+    },
+    {
+      "name": "Shell Armor",
+      "price": 300,
+      "def": 16,
+      "special": null,
+      "locations": ["Romaly", "Crabus"]
+    },
+    {
+      "name": "Chain Mail",
+      "price": 480,
+      "def": 20,
+      "special": null,
+      "locations": ["Romaly", "Assaram"]
+    },
+    {
+      "name": "Cloak of Evasion",
+      "price": 2900,
+      "def": 20,
+      "special": "Wearer has an additional 20% chance to evade physical attacks",
+      "locations": ["Noaniels", "Assaram", "Isis", "Muor", "Lancel", "Rimuldar", "Hunter Fly", "Ghoul", "Hades' Condor"]
+    },
+    {
+      "name": "Iron Apron",
+      "price": 700,
+      "def": 22,
+      "special": null,
+      "locations": ["Romaly", "Kanave", "Assaram"]
+    },
+    {
+      "name": "Fighting Suit",
+      "price": 800,
+      "def": 23,
+      "special": null,
+      "locations": ["Kanave", "Aliahan", "Muor", "Soo", "Tentacles"]
+    },
+    {
+      "name": "Half Plate Armor",
+      "price": 1100,
+      "def": 25,
+      "special": null,
+      "locations": ["Kanave", "Assaram", "Isis", "Infernus Knight"]
+    },
+    {
+      "name": "Flashy Clothes",
+      "price": 1300,
+      "def": 28,
+      "special": null,
+      "locations": ["Pyramid", "Soo", "Dancing Jewel"]
+    },
+    {
+      "name": "Sacred Robe",
+      "price": 4400,
+      "def": 30,
+      "special": "Reduces all magic damage down to 2/3.",
+      "locations": ["Tedanki", "Lancel", "New Town", "Tantegel", "Hauksness"]
+    },
+    {
+      "name": "Full Plate Armor",
+      "price": 2400,
+      "def": 32,
+      "special": null,
+      "locations": ["Isis", "Muor", "Lethal Knight"]
+    },
+    {
+      "name": "Angel's Robe",
+      "price": 3000,
+      "def": 35,
+      "special": "Halves the chance of being hit by Defeat & Beat spells",
+      "locations": ["Elf Village", "Tantegel"]
+    },
+    {
+      "name": "Water Flying Clothes",
+      "price": 12500,
+      "def": 40,
+      "special": "Reduces all magic and breath damage down to 2/3.",
+      "locations": ["Kol"]
+    },
+    {
+      "name": "Magic Armor",
+      "price": 5800,
+      "def": 40,
+      "special": "Reduces all magic damage down to 2/3.",
+      "locations": ["Tedanki", "Samanao", "New Town", "Rimuldar"]
+    },
+    {
+      "name": "Dragon Mail",
+      "price": 9800,
+      "def": 45,
+      "special": "Reduces fire breath damage down to 2/3.",
+      "locations": ["New Town", "Tantegel", "Hauksness", "Kol", "King Hydra"]
+    },
+    {
+      "name": "Armor of Terrafirma",
+      "price": 99999,
+      "def": 50,
+      "special": "Cannot be sold or dropped.",
+      "locations": ["Navel of the Earth", "Stone Hulk"]
+    },
+    {
+      "name": "Swordedge Armor",
+      "price": 99999,
+      "def": 55,
+      "special": "Reflects 50% + 1 of physical attack damage back at the enemy. Cannot be sold or dropped.",
+      "locations": ["Cave of Necrogond"]
+    },
+    {
+      "name": "Armor of Hades",
+      "price": 7000,
+      "def": 65,
+      "special": "Cursed: 33% chance to immobolize wearer every time Attack command is used. Reduces all magic damage down to 1/4 + 1.",
+      "locations": ["Cave Southwest of Tantegel"]
+    },
+    {
+      "name": "Armor of Radiance",
+      "price": 99999,
+      "def": 75,
+      "special": "Restores 1HP per step, reduces all magic and breath damage down to 2/3. Cannot be sold or dropped.",
+      "locations": ["Tower West of Kol"]
+    }
+  ],
+  "shields": [
+    {
+      "name": "Shield of Sorrow",
+      "price": 10,
+      "def": 35,
+      "special": "Cursed: Physical attack damage reduced to 1/2 if neither the Cloak of Evasion or Swordedge Armor are being worn. Another random party member will then receive the other half of the damage, if the Shield of Sorrow user isn't wearing a Cloak of Evasion.",
+      "locations": ["Lionhead", "Leona", "Lionroar", "Baramos Bomus"]
+    },
+    {
+      "name": "Leather Shield",
+      "price": 90,
+      "def": 4,
+      "special": null,
+      "locations": ["Aliahan", "Reeve", "Rammore"]
+    },
+    {
+      "name": "Bronze Shield",
+      "price": 180,
+      "def": 7,
+      "special": null,
+      "locations": ["Romaly", "Kanave", "Assaram", "Tedanki", "Infernus Crab"]
+    },
+    {
+      "name": "Iron Shield",
+      "price": 700,
+      "def": 12,
+      "special": null,
+      "locations": ["Kanave", "Assaram", "Isis"]
+    },
+    {
+      "name": "Silver Shield",
+      "price": 8800,
+      "def": 30,
+      "special": null,
+      "locations": ["Samanao", "New Town", "Kol", "Rimuldar"]
+    },
+    {
+      "name": "Shield of Strength",
+      "price": 15000,
+      "def": 40,
+      "special": "Item: casts Healmore. Can be used as an item by ANY class.",
+      "locations": ["Hauksness"]
+    },
+    {
+      "name": "Shield of Heroes",
+      "price": 99999,
+      "def": 50,
+      "special": "All breath damage reduced down to 2/3. Cannot be sold or dropped.",
+      "locations": ["Cave NW of Tantegel"]
+    }
+  ],
+  "helmets": [
+    {
+      "name": "Leather Helmet",
+      "price": 80,
+      "def": 2,
+      "special": null,
+      "locations": ["Reeve", "Tower of Najima", "Romaly", "Isis", "New Town", "Spiked Hare", "Giant Anteater", "Merzoncian"]
+    },
+    {
+      "name": "Golden Crown",
+      "price": 99999,
+      "def": 6,
+      "special": "Plot item. Cannot be sold or dropped.",
+      "locations": ["Kandar"]
+    },
+    {
+      "name": "Mysterious Hat",
+      "price": 8,
+      "def": 8,
+      "special": "Spells cost 75% + 1 of original amount",
+      "locations": ["Glacier Basher", "Magiwyvern", "Barog"]
+    },
+    {
+      "name": "Turban",
+      "price": 160,
+      "def": 8,
+      "special": null,
+      "locations": ["Reeve", "Assaram"]
+    },
+    {
+      "name": "Iron Helmet",
+      "price": 2000,
+      "def": 16,
+      "special": null,
+      "locations": ["Assaram", "Tower of Garuna", "Tortragon"]
+    },
+    {
+      "name": "Iron Mask",
+      "price": 3500,
+      "def": 25,
+      "special": null,
+      "locations": ["Tedanki", "Muor", "Lancel", "Kol", "Rimuldar"]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Poison Needle",
+      "price": 10,
+      "def": 1,
+      "special": "12% chance of instant kill",
+      "locations": ["Kanave", "Soo", "Man-Eater Moth", "Executioner"]
+    },
+    {
+      "name": "Cypress Stick",
+      "price": 5,
+      "def": 2,
+      "special": null,
+      "locations": ["Aliahan", "Soo", "Kandar", "Kandar Henchman", "Man-Eater Chest", "Slime Snaii"]
+    },
+    {
+      "name": "Falcon Sword",
+      "price": 25000,
+      "def": 5,
+      "special": "Attacks twice per round; useful against Metal Babbles.",
+      "locations": ["Tantegel", "Rimuldar"]
+    },
+    {
+      "name": "Club",
+      "price": 30,
+      "def": 7,
+      "special": null,
+      "locations": ["Aliahan", "Kanave", "Cave of Norud", "Soo", "Troll"]
+    },
+    {
+      "name": "Copper Sword",
+      "price": 100,
+      "def": 12,
+      "special": null,
+      "locations": ["Aliahan", "Reeve", "Rogue Knight"]
+    },
+    {
+      "name": "Magic Knife",
+      "price": 200,
+      "def": 14,
+      "special": null,
+      "locations": ["Reeve", "Cave of Enticement", "Cave of Dreams", "Assaram", "Lancel", "Humanabat"]
+    },
+    {
+      "name": "Wizard's Wand",
+      "price": 1500,
+      "def": 15,
+      "special": "Item: casts Blaze",
+      "locations": ["Noaniels", "Samanao", "Tantegel"]
+    },
+    {
+      "name": "Staff of Rain",
+      "price": 99999,
+      "def": 16,
+      "special": "Item: casts StopSpell. Needed to trade for Rainbow Drop. Cannot be sold or dropped.",
+      "locations": ["Shrine South of Cantlin"]
+    },
+    {
+      "name": "Thorn Whip",
+      "price": 320,
+      "def": 18,
+      "special": null,
+      "locations": ["Reeve", "Soo", "King Froggore", "Terror Shadow"]
+    },
+    {
+      "name": "Chain Sickle",
+      "price": 550,
+      "def": 24,
+      "special": null,
+      "locations": ["Reeve", "Romaly", "Assaram", "Eliminator"]
+    },
+    {
+      "name": "Iron Spear",
+      "price": 750,
+      "def": 28,
+      "special": null,
+      "locations": ["Romaly", "Kanave", "Assaram", "Lancel", "Tonguebear"]
+    },
+    {
+      "name": "Iron Claw",
+      "price": 770,
+      "def": 30,
+      "special": null,
+      "locations": ["Kanave", "Samanao", "Garuda", "Goopi"]
+    },
+    {
+      "name": "Staff of Thunder",
+      "price": 2500,
+      "def": 30,
+      "special": "Item: casts Firebane. Any class can use it from item menu.",
+      "locations": ["Soo"]
+    },
+    {
+      "name": "Broad Sword",
+      "price": 1500,
+      "def": 33,
+      "special": null,
+      "locations": ["Romaly", "Kanave", "Assaram", "Isis", "Kol", "Skeleton"]
+    },
+    {
+      "name": "Staff of Reflection",
+      "price": 7000,
+      "def": 33,
+      "special": "Item: casts Bounce",
+      "locations": ["Archmages"]
+    },
+    {
+      "name": "Staff of Judgement",
+      "price": 2700,
+      "def": 35,
+      "special": "Item: casts Infernos",
+      "locations": ["Muor", "Samanao", "New Town", "Tantegel", "Hauksness"]
+    },
+    {
+      "name": "Battle Axe",
+      "price": 2500,
+      "def": 40,
+      "special": null,
+      "locations": ["Assaram", "Isis", "Lancel", "Avenger"]
+    },
+    {
+      "name": "Giant Shears",
+      "price": 3700,
+      "def": 48,
+      "special": null,
+      "locations": ["Assaram", "Isis"]
+    },
+    {
+      "name": "Sword of Gaia",
+      "price": 99999,
+      "def": 48,
+      "special": "Needed to open the path to Necrogond. Cannot be sold or dropped.",
+      "locations": ["Shrine Jail"]
+    },
+    {
+      "name": "Sword of Illusion",
+      "price": 99999,
+      "def": 50,
+      "special": "Item: casts Chaos. Talk to a woman south of the entrance after Baramos is defeated. Female only. Cannot be sold or dropped.",
+      "locations": ["Portoga (after Baramos's Death)", "Winged Demon"]
+    },
+    {
+      "name": "Staff of Force",
+      "price": 2500,
+      "def": 55,
+      "special": "Uses 3MP per attack",
+      "locations": ["Assaram", "Tedanki"]
+    },
+    {
+      "name": "Sledge Hammer",
+      "price": 6500,
+      "def": 55,
+      "special": null,
+      "locations": ["Tedanki", "Muor", "Lancel", "Kol"]
+    },
+    {
+      "name": "Golden Claw",
+      "price": 15000,
+      "def": 55,
+      "special": "It dramatically increases encounter rate, even if unequipped.",
+      "locations": ["Pyramid", "Gold Basher"]
+    },
+    {
+      "name": "Orochi Sword",
+      "price": 1000,
+      "def": 63,
+      "special": "Item: casts Defense",
+      "locations": ["Orochi"]
+    },
+    {
+      "name": "Zombie Slasher",
+      "price": 9800,
+      "def": 65,
+      "special": "Deals extra damage to undead enemies",
+      "locations": ["Tedanki", "Samanao", "New Town", "Hauksness"]
+    },
+    {
+      "name": "Dragon Killer",
+      "price": 15000,
+      "def": 77,
+      "special": "Deals extra damage to dragon enemies, including the armored tortoises",
+      "locations": ["Samanao", "New Town", "Tantegel"]
+    },
+    {
+      "name": "Snowblast Sword",
+      "price": 15000,
+      "def": 80,
+      "special": "Item: casts Snowblast",
+      "locations": ["Marauder", "Swordoid"]
+    },
+    {
+      "name": "Thunder Sword",
+      "price": 7500,
+      "def": 85,
+      "special": "Item: casts Boom",
+      "locations": ["Cave of Necrogond"]
+    },
+    {
+      "name": "Demon Axe",
+      "price": 500,
+      "def": 90,
+      "special": "Cursed: it misses very often and 12.5% chance of critical hit.",
+      "locations": ["Castle of Baramos", "Mimic"]
+    },
+    {
+      "name": "Thor's Sword",
+      "price": 43690,
+      "def": 95,
+      "special": "Item: casts Firevolt",
+      "locations": ["Boss Troll", "Troll King", "Granite Titan"]
+    },
+    {
+      "name": "Multi-Edge Sword",
+      "price": 5000,
+      "def": 100,
+      "special": "Cursed: deals damage to both user and enemy",
+      "locations": ["Castle of Zoma", "Frost Cloud", "Elysium Bird"]
+    },
+    {
+      "name": "Sword of Destruction",
+      "price": 45000,
+      "def": 110,
+      "special": "Cursed: the user gets stunned randomly",
+      "locations": ["Rimuldar", "Baramos Gonus"]
+    },
+    {
+      "name": "Sword of Kings",
+      "price": 32767,
+      "def": 120,
+      "special": "Item: casts Firevolt. Sell Oricon to the item shop owner to get it.",
+      "locations": ["Kol"]
+    }
+  ]
+};
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const appDiv = document.getElementById('app');
+            const classes = jsonData.classes;
+
+            // Define the order of item types for display
+            const itemTypesOrder = ['armor', 'shields', 'helmets', 'weapons'];
+
+            itemTypesOrder.forEach(itemType => {
+                const itemsOfType = jsonData[itemType];
+                if (!itemsOfType || itemsOfType.length === 0) {
+                    return; // Skip if no items for this type
+                }
+
+                const itemTypeName = itemType.charAt(0).toUpperCase() + itemType.slice(1); // Capitalize first letter
+
+                const tableContainer = document.createElement('div');
+                tableContainer.classList.add('table-container');
+
+                const heading = document.createElement('h2');
+                heading.classList.add('item-type-heading');
+                heading.textContent = `${itemTypeName} Compatibility`;
+                tableContainer.appendChild(heading);
+
+                const table = document.createElement('table');
+                const thead = document.createElement('thead');
+                const tbody = document.createElement('tbody');
+
+                // Create table header row
+                const headerRow = document.createElement('tr');
+                const emptyTh = document.createElement('th');
+                emptyTh.textContent = 'Class \\ Item'; // Corner cell
+                headerRow.appendChild(emptyTh);
+
+                itemsOfType.forEach(item => {
+                    const th = document.createElement('th');
+                    th.textContent = item.name;
+                    headerRow.appendChild(th);
+                });
+                thead.appendChild(headerRow);
+                table.appendChild(thead);
+
+                // Create table body rows
+                classes.forEach(cls => {
+                    const row = document.createElement('tr');
+                    const classNameTd = document.createElement('td');
+                    classNameTd.classList.add('class-name');
+                    classNameTd.textContent = cls.name;
+                    classNameTd.style.backgroundColor = cls.color; // Set class color
+                    row.appendChild(classNameTd);
+
+                    itemsOfType.forEach(item => {
+                        const cell = document.createElement('td');
+                        // Check if the current class (cls) has the current item (item.name) in its allowed list for this item type
+                        const isCompatible = cls[itemType] && cls[itemType].includes(item.name);
+                        const isCursed = item.cursed !== null;
+                        
+                        if (isCompatible) {
+                            cell.textContent = item.name;
+                            if (isCursed) {
+                              cell.classList.add('item-cursed');
+                            } else {
+                              cell.classList.add('item-available');
+                            }
+                        } else {
+                            // cell.textContent = '—'; // Or leave empty
+                            cell.classList.add('item-not-available');
+                        }
+                        row.appendChild(cell);
+                    });
+                    tbody.appendChild(row);
+                });
+                table.appendChild(tbody);
+                tableContainer.appendChild(table);
+                appDiv.appendChild(tableContainer);
+            });
+        });
+    </script>
+</body>
+</html>
