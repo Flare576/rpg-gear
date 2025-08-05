@@ -184,6 +184,10 @@
         const tooltipCursedNote = itemTooltip.querySelector('#tooltipCursedNote');
         const tooltipCloseButton = itemTooltip.querySelector('.tooltip-close');
 
+        // Get references to the parent <p> elements for Attack and Defense
+        const tooltipAttackParagraph = tooltipAttack.closest('p');
+        const tooltipDefenseParagraph = tooltipDefense.closest('p');
+
         function showTooltip(itemName, targetElement, event) {
             const item = allItemsMap.get(itemName);
             if (!item) {
@@ -194,10 +198,24 @@
             // Populate tooltip
             tooltipTitle.textContent = item.name;
             tooltipType.textContent = item.type.charAt(0).toUpperCase() + item.type.slice(1);
-            tooltipAttack.textContent = item.attack !== undefined ? item.attack : 'N/A';
-            tooltipDefense.textContent = item.defense !== undefined ? item.defense : 'N/A';
             tooltipEffect.textContent = item.special || 'None';
             tooltipCursedNote.style.display = item.cursed ? 'block' : 'none';
+
+            // Handle Attack field visibility and content
+            if (['armor', 'shields', 'helmets'].includes(item.type) && item.attack === undefined) {
+                tooltipAttackParagraph.style.display = 'none';
+            } else {
+                tooltipAttackParagraph.style.display = 'flex'; // Or 'block', depending on desired layout
+                tooltipAttack.textContent = item.attack !== undefined ? item.attack : 'N/A';
+            }
+
+            // Handle Defense field visibility and content
+            if (item.type === 'weapons' && item.defense === undefined) {
+                tooltipDefenseParagraph.style.display = 'none';
+            } else {
+                tooltipDefenseParagraph.style.display = 'flex'; // Or 'block', depending on desired layout
+                tooltipDefense.textContent = item.defense !== undefined ? item.defense : 'N/A';
+            }
 
             // Position tooltip
             const rect = targetElement.getBoundingClientRect();
