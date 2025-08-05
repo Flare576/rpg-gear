@@ -150,6 +150,7 @@
         </div>
         <div class="tooltip-content">
             <p><span class="label">Type:</span> <span id="tooltipType"></span></p>
+            <p><span class="label">Price:</span> <span id="tooltipPrice"></span></p>
             <p><span class="label">Attack:</span> <span id="tooltipAttack"></span></p>
             <p><span class="label">Defense:</span> <span id="tooltipDefense"></span></p>
             <p><span class="label">Effect:</span> <span id="tooltipEffect"></span></p>
@@ -178,6 +179,7 @@
         const itemTooltip = document.getElementById('itemTooltip');
         const tooltipTitle = itemTooltip.querySelector('.tooltip-title');
         const tooltipType = itemTooltip.querySelector('#tooltipType');
+        const tooltipPrice = itemTooltip.querySelector('#tooltipPrice');
         const tooltipAttack = itemTooltip.querySelector('#tooltipAttack');
         const tooltipDefense = itemTooltip.querySelector('#tooltipDefense');
         const tooltipEffect = itemTooltip.querySelector('#tooltipEffect');
@@ -198,7 +200,9 @@
             // Populate tooltip
             tooltipTitle.textContent = item.name;
             tooltipType.textContent = item.type.charAt(0).toUpperCase() + item.type.slice(1);
+            tooltipPrice.textContent = item.price ? item.price.toLocaleString() : 'N/A';
             tooltipEffect.textContent = item.special || 'None';
+            tooltipCursedNote.textContent = "CURSED! " + item.cursed;
             tooltipCursedNote.style.display = item.cursed ? 'block' : 'none';
 
             // Handle Attack field visibility and content

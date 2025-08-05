@@ -3,229 +3,268 @@
     {
       "name": "Hero",
       "color": "#6495ed",
-      "armor": ["Wayfarer's Clothes","Leather Armor","Chain Mail","Iron Armor","Full Plate Armor","Liquid Metal Armor","Dragon Mail","Armour of Leona","Armour of Orgo","Zenithian Armor"],
-      "shields": ["Leather Shield","Scale Shield","Iron Shield","Magic Shield","Dragon Shield","Liquid Metal Shield","Zenithian Shield"],
-      "helmets": ["Leather Hat","Iron Helmet","Liquid Metal Helm","Zenithian Helm"],
-      "weapons": ["Cypress Stick","Copper Sword","Iron Lance","Steel Broadsword","Demon Spear","Falcon Blade","Dragon Killer","Sword of Miracles","Sword of Gaia","Hell Sabre","Fire Blade","Ice Blade","Spiked Steel Whip","King's Sword"]
-    }, {
-      "name": "Ragnar (Warrior)",
+      "armor": ["Basic Clothes","Wayfarer's Clothes","Silk Robe","Leather Armor","Leather Dress","Chain Mail","Fur Coat","Bronze Armor","Half Plate Armor","Full Plate Armor","Dragon Mail","Pink Leotard","Swordedge Armor","Metal Babble Armor","Zombie Mail","Demon Armor","Dress of Radiance","Zenithian Armor"],
+      "shields": ["Leather Shield","Scale Shield","Iron Shield","Dragon Shield","Shield of Strength","Aeolus Shield","Mirror Shield","Zenithian Shield"],
+      "helmets": ["Leather Hat","Wooden Hat","Golden Barrette","Iron Helm","Iron Mask","Mask of Corruption","Zenithian Helm"],
+      "weapons": ["Cypress Stick","Club","Copper Sword","Thorn Whip","Boomerang","Chain Sickle","Iron Spear","Broad Sword","Sword of Malice","Battle Axe","Sword of Lethargy","Dragon Killer","Demon Hammer","Ice Blade","Multi-Edge Sword","Sword of Miracles","Metal Babble Sword","Zenithian Sword"]
+    },
+    {
+      "name": "Soldier",
       "color": "#ff0000",
-      "armor": ["Wayfarer's Clothes","Leather Armor","Chain Mail","Iron Armor","Full Plate Armor","Spiked Armor","Temperamental Armor","Liquid Metal Armor","Dragon Mail","Armour of Leona"],
-      "shields": ["Leather Shield","Scale Shield","Iron Shield","Dragon Shield","Liquid Metal Shield"],
-      "helmets": ["Leather Hat","Iron Helmet","Iron Mask","Liquid Metal Helm","Helmet of Hades"],
-      "weapons": ["Cypress Stick","Copper Sword","Iron Lance","Steel Broadsword","Battle Axe","Great Axe","Demon Spear","War Hammer","Flail of Destruction","Hell Sabre","Fire Blade","Ice Blade","Hela Hammer","Gigasteel Broadsword"]
-    }, {
-      "name": "Alena (Martial Artist)",
-      "color": "#ff00ff",
-      "armor": ["Wayfarer's Clothes","Training Attire","Silk Robe","Dancer's Costume","Dragon Mail","Angel's Leotard"],
-      "shields": [],
-      "helmets": [],
-      "weapons": ["Cypress Stick","Iron Claw","Razor-Wing Boomerang","Cestus","Golden Claw","Fire Claw","Master Dragon Claw"]
-    }, {
-      "name": "Borya (Mage)",
-      "color": "#fff2cc",
-      "armor": ["Wayfarer's Clothes","Training Attire","Silk Robe","Magic Robe","Water Flying Clothes","Sage's Robe"],
-      "shields": ["Scale Shield","Magic Shield"],
-      "helmets": ["Leather Hat","Pointy Hat","Feather Hat","Great Helm"],
-      "weapons": ["Cypress Stick","Poison Needle","Staff of Antimagic","Staff of Thunder","Staff of Divine Wrath"]
-    }, {
-      "name": "Kiryl (Priest)",
-      "color": "#ffffff",
-      "armor": ["Wayfarer's Clothes","Training Attire","Silk Robe","Magic Robe","Water Flying Clothes","Angel's Robe","Sage's Robe","Robe of Serenity"],
-      "shields": ["Leather Shield","Scale Shield","Iron Shield","Magic Shield","Liquid Metal Shield"],
-      "helmets": ["Leather Hat","Pointy Hat","Feather Hat","Iron Helmet","Great Helm"],
-      "weapons": ["Cypress Stick","Staff of Antimagic","Staff of Thunder","Staff of Divine Wrath","Staff of Salvation","Staff of Revival"]
-    }, {
-      "name": "Torneko (Merchant)",
+      "armor": ["Basic Clothes","Wayfarer's Clothes","Leather Armor","Chain Mail","Fur Coat","Bronze Armor","Half Plate Armor","Full Plate Armor","Dragon Mail","Swordedge Armor","Metal Babble Armor","Zombie Mail","Demon Armor"],
+      "shields": ["Leather Shield","Scale Shield","Iron Shield","Dragon Shield","Shield of Strength","Aeolus Shield","Mirror Shield"],
+      "helmets": ["Leather Hat","Wooden Hat","Iron Helm","Iron Mask","Mask of Corruption","Metal Babble Helm"],
+      "weapons": ["Cypress Stick","Club","Copper Sword","Thorn Whip","Boomerang","Chain Sickle","Iron Spear","Morning Star","Broad Sword","Sword of Malice","Battle Axe","Sword of Lethargy","Dragon Killer","Sword of Decimation","Demon Hammer","Ice Blade","Multi-Edge Sword","Sword of Miracles","Metal Babble Sword"]
+    },
+    {
+      "name": "Merchant",
       "color": "#ffffe0",
-      "armor": ["Wayfarer's Clothes","Leather Armor","Chain Mail","Iron Armor","Iron Apron","Full Plate Armor","Spiked Armor","Temperamental Armor"],
-      "shields": ["Leather Shield","Scale Shield","Iron Shield"],
-      "helmets": ["Leather Hat","Pointy Hat","Iron Helmet","Iron Mask"],
-      "weapons": ["Cypress Stick","Copper Sword","Iron Lance","Steel Broadsword","Battle Axe","War Hammer","Flail of Destruction","Spiked Steel Whip","Razor-Wing Boomerang","Poison Needle","Dragon Killer","Gigasteel Broadsword"]
-    }, {
-      "name": "Maya (Dancer/Mage)",
-      "color": "#ea9999",
-      "armor": ["Wayfarer's Clothes","Training Attire","Silk Robe","Dancer's Costume","Water Flying Clothes","Angel's Leotard","Sage's Robe"],
+      "armor": ["Basic Clothes","Wayfarer's Clothes","Leather Armor","Chain Mail","Fur Coat","Bronze Armor","Iron Apron","Swordedge Armor","Metal Babble Armor","Robe of Serenity"],
+      "shields": ["Leather Shield","Scale Shield","Iron Shield","Shield of Strength"],
+      "helmets": ["Leather Hat","Wooden Hat","Iron Helm","Mask of Corruption","Metal Babble Helm"],
+      "weapons": ["Cypress Stick","Club","Copper Sword","Thorn Whip","Boomerang","Chain Sickle","Venomous Dagger","Iron Spear","Abacus of Virtue","Sword of Malice","Sword of Decimation","Sword of Miracles","Metal Babble Sword"]
+    },
+    {
+      "name": "Princess",
+      "color": "#ffc0cb",
+      "armor": ["Basic Clothes","Wayfarer's Clothes","Silk Robe","Leather Armor","Leather Dress","Chain Mail","Dancer's Costume","Fur Coat","Cloak of Evasion","Pink Leotard","Robe of Serenity","Dress of Radiance"],
       "shields": [],
-      "helmets": ["Leather Hat","Pointy Hat","Feather Hat"],
-      "weapons": ["Cypress Stick","Poison Needle","Chain Whip","Spiked Steel Whip","Falcon Blade","Fire Claw","Fan of Peace","Flame Fan","Sphere of Silence"]
-    }, {
-      "name": "Meena (Fortune Teller/Priest)",
-      "color": "#00ff00",
-      "armor": ["Wayfarer's Clothes","Training Attire","Silk Robe","Magic Robe","Water Flying Clothes","Angel's Robe","Sage's Robe","Robe of Serenity"],
-      "shields": ["Leather Shield","Scale Shield","Magic Shield"],
-      "helmets": ["Leather Hat","Pointy Hat","Feather Hat"],
-      "weapons": ["Cypress Stick","Poison Needle","Chain Whip","Spiked Steel Whip","Staff of Antimagic","Staff of Thunder","Staff of Divine Wrath","Sphere of Silence","Staff of Salvation","Staff of Revival"]
+      "helmets": ["Leather Hat","Wooden Hat","Feather Hat","Golden Barrette","Mask of Corruption"],
+      "weapons": ["Club","Thorn Whip","Boomerang","Chain Sickle","Iron Claw","Stiletto Earrings","Fire Claw"]
+    },
+    {
+      "name": "Chancellor",
+      "color": "#000080",
+      "armor": ["Basic Clothes","Wayfarer's Clothes","Leather Armor","Chain Mail","Fur Coat","Bronze Armor","Half Plate Armor","Sacred Robe","Metal Babble Armor","Robe of Serenity","Mysterious Bolero"],
+      "shields": ["Leather Shield","Scale Shield","Iron Shield","Shield of Strength","Mirror Shield","Metal Babble Shield"],
+      "helmets": ["Leather Hat","Wooden Hat","Iron Helm","Mask of Corruption","Hat of Happiness","Metal Babble Helm"],
+      "weapons": ["Cypress Stick","Club","Copper Sword","Thorn Whip","Boomerang","Chain Sickle","Iron Spear","Morning Star","Staff of Force","Staff of Jubilation","Staff of Antimagic","Staff of Punishment","Staff of Healing","Sword of Miracles","Metal Babble Sword","Magma Staff"]
+    },
+    {
+      "name": "Fortune Teller",
+      "color": "#800080",
+      "armor": ["Basic Clothes","Wayfarer's Clothes","Silk Robe","Leather Dress","Fur Coat","Bronze Armor","Half Plate Armor","Sacred Robe","Pink Leotard","Metal Babble Armor","Water Flying Clothes","Robe of Serenity","Mysterious Bolero","Dress of Radiance"],
+      "shields": ["Leather Shield","Scale Shield","Iron Shield","Metal Babble Shield"],
+      "helmets": ["Leather Hat","Wooden Hat","Feather Hat","Golden Barrette","Mask of Corruption","Hat of Happiness","Metal Babble Helm"],
+      "weapons": ["Cypress Stick","Club","Copper Sword","Thorn Whip","Boomerang","Chain Sickle","Venomous Dagger","Morning Star","Stiletto Earrings","Staff of Force","Staff of Jubilation","Silver Tarot Cards","Staff of Antimagic","Staff of Punishment","Staff of Healing","Metal Babble Sword","Magma Staff"]
+    },
+    {
+      "name": "Dancer",
+      "color": "#ea9999",
+      "armor": ["Basic Clothes","Wayfarer's Clothes","Silk Robe","Leather Dress","Dancer's Costume","Fur Coat","Cloak of Evasion","Pink Leotard","Water Flying Clothes","Robe of Serenity","Mysterious Bolero","Dress of Radiance"],
+      "shields": ["Metal Babble Shield"],
+      "helmets": ["Leather Hat","Feather Hat","Golden Barrette","Mask of Corruption","Hat of Happiness"],
+      "weapons": ["Cypress Stick","Thorn Whip","Boomerang","Iron Fan","Venomous Dagger","Poison Needle","Stiletto Earrings","Staff of Force","Staff of Jubilation","Staff of Antimagic","Staff of Thunder","Magma Staff"]
+    },
+    {
+      "name": "Wizard",
+      "color": "#fff2cc",
+      "armor": ["Basic Clothes","Wayfarer's Clothes","Leather Armor","Cloak of Evasion","Water Flying Clothes","Robe of Serenity","Mysterious Bolero"],
+      "shields": ["Leather Shield","Scale Shield","Metal Babble Shield"],
+      "helmets": ["Leather Hat","Mask of Corruption","Hat of Happiness"],
+      "weapons": ["Cypress Stick","Boomerang","Venomous Dagger","Poison Needle","Staff of Force","Staff of Jubilation","Staff of Antimagic","Staff of Healing","Staff of Thunder","Magma Staff"]
     }
   ],
   "armor": [
     {
+      "name": "Basic Clothes",
+      "price": 10,
+      "defense": 4,
+      "cursed": null,
+      "special": null,
+      "locations": []
+    },
+    {
       "name": "Wayfarer's Clothes",
       "price": 70,
-      "defense": 8,
+      "defense": 7,
       "cursed": null,
       "special": null,
-      "locations": ["Strathbaile", "Woodcutter's Cabin", "Lakanaba"]
-    },
-    {
-      "name": "Leather Armor",
-      "price": 150,
-      "defense": 12,
-      "cursed": null,
-      "special": null,
-      "locations": ["Endor", "Aubout du Monde"]
-    },
-    {
-      "name": "Training Attire",
-      "price": 80,
-      "defense": 10,
-      "cursed": null,
-      "special": null,
-      "locations": ["Endor", "Aubout du Monde"]
-    },
-    {
-      "name": "Silk Robe",
-      "price": 200,
-      "defense": 13,
-      "cursed": null,
-      "special": null,
-      "locations": ["Endor", "Aubout du Monde"]
-    },
-    {
-      "name": "Chain Mail",
-      "price": 480,
-      "defense": 20,
-      "cursed": null,
-      "special": null,
-      "locations": ["Endor", "Mintos"]
-    },
-    {
-      "name": "Iron Apron",
-      "price": 700,
-      "defense": 22,
-      "cursed": null,
-      "special": "Torneko only.",
-      "locations": ["Mintos", "Bonmalmo"]
-    },
-    {
-      "name": "Iron Armor",
-      "price": 1000,
-      "defense": 25,
-      "cursed": null,
-      "special": null,
-      "locations": ["Mintos", "Porthaven"]
+      "locations": []
     },
     {
       "name": "Dancer's Costume",
-      "price": 1300,
-      "defense": 28,
+      "price": 400,
+      "defense": 8,
       "cursed": null,
-      "special": "Female only.",
-      "locations": ["Porthaven", "Burland", "Desert Bazaar"]
+      "special": null,
+      "locations": []
     },
     {
-      "name": "Magic Robe",
-      "price": 4000,
+      "name": "Silk Robe",
+      "price": 110,
+      "defense": 10,
+      "cursed": null,
+      "special": null,
+      "locations": []
+    },
+    {
+      "name": "Leather Armor",
+      "price": 180,
+      "defense": 12,
+      "cursed": null,
+      "special": null,
+      "locations": []
+    },
+    {
+      "name": "Leather Dress",
+      "price": 250,
+      "defense": 14,
+      "cursed": null,
+      "special": null,
+      "locations": []
+    },
+    {
+      "name": "Chain Mail",
+      "price": 350,
+      "defense": 18,
+      "cursed": null,
+      "special": null,
+      "locations": []
+    },
+    {
+      "name": "Fur Coat",
+      "price": 600,
+      "defense": 22,
+      "cursed": null,
+      "special": null,
+      "locations": []
+    },
+    {
+      "name": "Bronze Armor",
+      "price": 700,
+      "defense": 25,
+      "cursed": null,
+      "special": null,
+      "locations": []
+    },
+    {
+      "name": "Cloak of Evasion",
+      "price": 3000,
+      "defense": 28,
+      "cursed": null,
+      "special": null,
+      "locations": []
+    },
+    {
+      "name": "Half Plate Armor",
+      "price": 1200,
       "defense": 30,
       "cursed": null,
-      "special": "Reduces magic damage.",
-      "locations": ["Porthaven", "Ascantha"]
+      "special": null,
+      "locations": []
+    },
+    {
+      "name": "Iron Apron",
+      "price": 1500,
+      "defense": 32,
+      "cursed": null,
+      "special": null,
+      "locations": []
+    },
+    {
+      "name": "Robe of Serenity",
+      "price": 6000,
+      "defense": 33,
+      "cursed": null,
+      "special": "While asleep In battle, defense is increased",
+      "locations": ["Cave of Padequia"]
     },
     {
       "name": "Full Plate Armor",
       "price": 2300,
-      "defense": 32,
-      "cursed": null,
-      "special": null,
-      "locations": ["Ascantha", "Concheim"]
-    },
-    {
-      "name": "Spiked Armor",
-      "price": 3500,
       "defense": 35,
       "cursed": null,
-      "special": "Deals small damage to attacker on contact.",
-      "locations": ["Concheim", "Strathbaile"]
+      "special": null,
+      "locations": []
     },
     {
-      "name": "Dragon Mail",
-      "price": 9800,
-      "defense": 45,
+      "name": "Mysterious Bolero",
+      "price": 7500,
+      "defense": 37,
       "cursed": null,
-      "special": "Reduces fire/ice breath damage.",
-      "locations": ["Femiscyra", "Riverton", "Zenithia"]
+      "special": "Absorbs MP of spells cast on wearer",
+      "locations": ["Zenithian Tower"]
+    },
+    {
+      "name": "Sacred Robe",
+      "price": 4400,
+      "defense": 38,
+      "cursed": null,
+      "special": "Reduces Fire and Ice damage",
+      "locations": []
+    },
+    {
+      "name": "Pink Leotard",
+      "price": 6300,
+      "defense": 40,
+      "cursed": null,
+      "special": null,
+      "locations": []
     },
     {
       "name": "Water Flying Clothes",
-      "price": 12500,
-      "defense": 40,
-      "cursed": null,
-      "special": "Reduces magic/breath damage.",
-      "locations": ["Canaletto", "Riverton"]
-    },
-    {
-      "name": "Temperamental Armor",
-      "price": 10000,
-      "defense": 50,
-      "cursed": "Can inflict Confusion on user.",
-      "special": null,
-      "locations": ["Secret of Evolution cave", "Lost Shrine"]
-    },
-    {
-      "name": "Liquid Metal Armor",
       "price": 15000,
-      "defense": 50,
+      "defense": 41,
       "cursed": null,
-      "special": "Greatly reduces magic/breath damage.",
-      "locations": ["Femiscyra", "World Tree", "Zenithia", "Funky Fowl drop"]
+      "special": "Reduces Fire and Dragonbreath damage",
+      "locations": []
     },
     {
-      "name": "Sage's Robe",
-      "price": 13000,
-      "defense": 40,
-      "cursed": null,
-      "special": "Reduces MP cost of spells by 25%.",
-      "locations": ["Riverton", "Royal Crypt"]
-    },
-    {
-      "name": "Armour of Leona",
-      "price": 99999,
-      "defense": 55,
-      "cursed": null,
-      "special": "Heals HP per step. Hero/Ragnar only.",
-      "locations": ["Funky Fowl drop"]
-    },
-    {
-      "name": "Angel's Leotard",
-      "price": 99999,
-      "defense": 60,
-      "cursed": null,
-      "special": "Reduces damage from instant death spells. Female only.",
-      "locations": ["Royal Crypt"]
-    },
-    {
-      "name": "Robe of Serenity",
-      "price": 99999,
+      "name": "Dragon Mail",
+      "price": 5200,
       "defense": 45,
       "cursed": null,
-      "special": "Reduces damage from all spells. Kiryl/Meena only.",
-      "locations": ["Fountain of Purity"]
+      "special": "Reduces Dragonbreath damage",
+      "locations": []
     },
     {
-      "name": "Armour of Orgo",
-      "price": 99999,
-      "defense": 70,
+      "name": "Dress of Radiance",
+      "price": 8800,
+      "defense": 45,
       "cursed": null,
-      "special": "Reduces damage from magic/breath. Hero only.",
-      "locations": ["Prison of the Underworld"]
+      "special": "Bounces spells back at caster",
+      "locations": ["Shrine of Horn", "Final Cave"]
+    },
+    {
+      "name": "Zombie Mail",
+      "price": 834,
+      "defense": 49,
+      "cursed": "reduces wearer's HP with every step",
+      "special": null,
+      "locations": ["Den of Ramdivice"]
+    },
+    {
+      "name": "Swordedge Armor",
+      "price": 9800,
+      "defense": 50,
+      "cursed": null,
+      "special": "Enemies are damaged when they attack wearer",
+      "locations": []
+    },
+    {
+      "name": "Demon Armor",
+      "price": 1000,
+      "defense": 60,
+      "cursed": "sets Agility to zero",
+      "special": null,
+      "locations": ["Final Cave"]
     },
     {
       "name": "Zenithian Armor",
-      "price": 99999,
+      "price": 0,
       "defense": 70,
       "cursed": null,
-      "special": "Reduces damage from magic/breath. Essential plot item.",
-      "locations": ["Zenithia Castle"]
+      "special": "Reduces Dragonbreath, Fire and Ice damage",
+      "locations": ["Shrine of Breaking Waves"]
+    },
+    {
+      "name": "Metal Babble Armor",
+      "price": 15000,
+      "defense": 95,
+      "cursed": null,
+      "special": null,
+      "locations": []
     }
   ],
   "shields": [
@@ -235,7 +274,7 @@
       "defense": 4,
       "cursed": null,
       "special": null,
-      "locations": ["Strathbaile", "Woodcutter's Cabin", "Lakanaba"]
+      "locations": []
     },
     {
       "name": "Scale Shield",
@@ -243,73 +282,113 @@
       "defense": 7,
       "cursed": null,
       "special": null,
-      "locations": ["Endor", "Mintos"]
+      "locations": ["Final Cave"]
     },
     {
       "name": "Iron Shield",
-      "price": 700,
+      "price": 650,
       "defense": 12,
       "cursed": null,
       "special": null,
-      "locations": ["Mintos", "Porthaven"]
-    },
-    {
-      "name": "Magic Shield",
-      "price": 8800,
-      "defense": 30,
-      "cursed": null,
-      "special": "Reduces magic damage.",
-      "locations": ["Canaletto", "Riverton"]
+      "locations": []
     },
     {
       "name": "Dragon Shield",
-      "price": 15000,
-      "defense": 40,
+      "price": 7100,
+      "defense": 30,
       "cursed": null,
-      "special": "Reduces fire/ice breath damage.",
-      "locations": ["Femiscyra", "Riverton"]
+      "special": "Reduces Dragonbreath damage",
+      "locations": []
     },
     {
-      "name": "Liquid Metal Shield",
-      "price": 15000,
+      "name": "Shield of Strength",
+      "price": 13000,
+      "defense": 40,
+      "cursed": null,
+      "special": "Item: casts Healmore",
+      "locations": []
+    },
+    {
+      "name": "Mirror Shield",
+      "price": 9000,
+      "defense": 45,
+      "cursed": null,
+      "special": "Reflects spell damage back at caster.",
+      "locations": ["Final Cave"]
+    },
+    {
+      "name": "Aeolus Shield",
+      "price": 4700,
       "defense": 50,
       "cursed": null,
-      "special": "Reduces magic/breath damage significantly.",
-      "locations": ["World Tree", "Zenithia", "Metal Slime Knight drop"]
+      "special": "Item: casts Expel",
+      "locations": ["Dire Palace"]
     },
     {
       "name": "Zenithian Shield",
-      "price": 99999,
+      "price": 0,
+      "defense": 55,
+      "cursed": null,
+      "special": "Item: casts Bounce",
+      "locations": ["Gardenbur"]
+    },
+    {
+      "name": "Metal Babble Shield",
+      "price": 43690,
       "defense": 60,
       "cursed": null,
-      "special": "Reduces magic/breath damage. Essential plot item.",
-      "locations": ["Zenithia Castle"]
+      "special": "Item: casts Fendspell.",
+      "locations": ["Casino", "50000 coins"]
     }
   ],
   "helmets": [
     {
       "name": "Leather Hat",
-      "price": 80,
+      "price": 64,
       "defense": 2,
       "cursed": null,
       "special": null,
-      "locations": ["Strathbaile", "Woodcutter's Cabin", "Lakanaba"]
+      "locations": []
     },
     {
-      "name": "Pointy Hat",
-      "price": 160,
+      "name": "Wooden Hat",
+      "price": 120,
+      "defense": 6,
+      "cursed": null,
+      "special": null,
+      "locations": []
+    },
+    {
+      "name": "Feather Hat",
+      "price": 280,
       "defense": 8,
       "cursed": null,
       "special": null,
-      "locations": ["Endor", "Mintos"]
+      "locations": []
     },
     {
-      "name": "Iron Helmet",
-      "price": 2000,
+      "name": "Golden Barrette",
+      "price": 540,
+      "defense": 12,
+      "cursed": null,
+      "special": null,
+      "locations": []
+    },
+    {
+      "name": "Hat of Happiness",
+      "price": 15,
+      "defense": 15,
+      "cursed": null,
+      "special": "Restores 1 MP every four steps",
+      "locations": ["Small Medal King", "4 medals"]
+    },
+    {
+      "name": "Iron Helm",
+      "price": 1100,
       "defense": 16,
       "cursed": null,
       "special": null,
-      "locations": ["Porthaven", "Ascantha"]
+      "locations": []
     },
     {
       "name": "Iron Mask",
@@ -317,41 +396,73 @@
       "defense": 25,
       "cursed": null,
       "special": null,
-      "locations": ["Ascantha", "Concheim"]
-    },
-    {
-      "name": "Liquid Metal Helm",
-      "price": 15000,
-      "defense": 30,
-      "cursed": null,
-      "special": "Reduces magic/breath damage.",
-      "locations": ["World Tree", "Zenithia", "Liquid Metal Slime drop"]
+      "locations": []
     },
     {
       "name": "Zenithian Helm",
-      "price": 99999,
+      "price": 0,
       "defense": 30,
       "cursed": null,
-      "special": "Essential plot item.",
-      "locations": ["Rosehill"]
+      "special": null,
+      "locations": ["Stancia"]
     },
     {
-      "name": "Helmet of Hades",
-      "price": 7000,
-      "defense": 40,
-      "cursed": "Can inflict Curse on user.",
+      "name": "Metal Babble Helm",
+      "price": 0,
+      "defense": 50,
+      "cursed": null,
       "special": null,
-      "locations": ["Hidden Prison"]
+      "locations": ["Small Medal King", "20 medals"]
+    },
+    {
+      "name": "Mask of Corruption",
+      "price": 8,
+      "defense": 200,
+      "cursed": "wearer is confused",
+      "special": null,
+      "locations": ["Cascade Cave"]
     }
   ],
   "weapons": [
     {
+      "name": "Poison Needle",
+      "price": 1300,
+      "attack": 0,
+      "cursed": null,
+      "special": "Instant-kill chance",
+      "locations": []
+    },
+    {
       "name": "Cypress Stick",
-      "price": 5,
+      "price": 4,
       "attack": 2,
       "cursed": null,
       "special": null,
-      "locations": ["Start"]
+      "locations": ["one location only"]
+    },
+    {
+      "name": "Stiletto Earrings",
+      "price": 7500,
+      "attack": 5,
+      "cursed": null,
+      "special": "Attacks twice per turn",
+      "locations": []
+    },
+    {
+      "name": "Staff of Healing",
+      "price": 6000,
+      "attack": 5,
+      "cursed": null,
+      "special": "Item: casts HealMore",
+      "locations": ["World Tree"]
+    },
+    {
+      "name": "Club",
+      "price": 30,
+      "attack": 7,
+      "cursed": null,
+      "special": null,
+      "locations": []
     },
     {
       "name": "Copper Sword",
@@ -359,263 +470,239 @@
       "attack": 12,
       "cursed": null,
       "special": null,
-      "locations": ["Strathbaile", "Lakanaba"]
+      "locations": []
     },
     {
-      "name": "Iron Lance",
-      "price": 450,
+      "name": "Thorn Whip",
+      "price": 200,
+      "attack": 14,
+      "cursed": null,
+      "special": null,
+      "locations": []
+    },
+    {
+      "name": "Boomerang",
+      "price": 350,
+      "attack": 18,
+      "cursed": null,
+      "special": null,
+      "locations": []
+    },
+    {
+      "name": "Chain Sickle",
+      "price": 550,
       "attack": 20,
       "cursed": null,
       "special": null,
-      "locations": ["Endor", "Mintos"]
+      "locations": []
     },
     {
-      "name": "Steel Broadsword",
-      "price": 1300,
-      "attack": 30,
+      "name": "Silver Tarot Cards",
+      "price": 500,
+      "attack": 21,
+      "cursed": null,
+      "special": "Item: 1 of 9 random effects",
+      "locations": ["Akemto Mine"]
+    },
+    {
+      "name": "Iron Fan",
+      "price": 620,
+      "attack": 22,
       "cursed": null,
       "special": null,
-      "locations": ["Mintos", "Porthaven"]
+      "locations": []
     },
     {
-      "name": "Battle Axe",
+      "name": "Venomous Dagger",
+      "price": 750,
+      "attack": 24,
+      "cursed": null,
+      "special": "Inflicts paralysis on enemy",
+      "locations": []
+    },
+    {
+      "name": "Iron Spear",
+      "price": 880,
+      "attack": 28,
+      "cursed": null,
+      "special": null,
+      "locations": []
+    },
+    {
+      "name": "Staff of Thunder",
+      "price": 20000,
+      "attack": 29,
+      "cursed": null,
+      "special": "Item: casts FireBane",
+      "locations": ["Palace of Necrosaro"]
+    },
+    {
+      "name": "Morning Star",
+      "price": 1250,
+      "attack": 33,
+      "cursed": null,
+      "special": null,
+      "locations": []
+    },
+    {
+      "name": "Staff of Jubilation",
+      "price": 90,
+      "attack": 33,
+      "cursed": null,
+      "special": "Item: Chance of enemy missing a turn",
+      "locations": ["Casino", "1000 coins"]
+    },
+    {
+      "name": "Abacus of Virtue",
+      "price": 1600,
+      "attack": 35,
+      "cursed": null,
+      "special": "Item: casts Expel",
+      "locations": []
+    },
+    {
+      "name": "Staff of Punishment",
+      "price": 4300,
+      "attack": 35,
+      "cursed": null,
+      "special": "Item: casts InferMore",
+      "locations": ["Small Medal King", "1 medal"]
+    },
+    {
+      "name": "Iron Claw",
+      "price": 1500,
+      "attack": 38,
+      "cursed": null,
+      "special": null,
+      "locations": ["Endor Castle"]
+    },
+    {
+      "name": "Broad Sword",
       "price": 2000,
       "attack": 40,
       "cursed": null,
       "special": null,
-      "locations": ["Porthaven", "Ascantha"]
+      "locations": []
     },
     {
-      "name": "Iron Claw",
-      "price": 770,
-      "attack": 30,
+      "name": "Sword of Malice",
+      "price": 3500,
+      "attack": 45,
       "cursed": null,
-      "special": "Alena only.",
-      "locations": ["Endor"]
+      "special": "Item: casts Firebal",
+      "locations": ["Loch Tower"]
     },
     {
-      "name": "Chain Whip",
-      "price": 1100,
-      "attack": 28,
-      "cursed": null,
-      "special": "Hits a group of enemies. Female only.",
-      "locations": ["Porthaven"]
-    },
-    {
-      "name": "Staff of Antimagic",
-      "price": 1800,
-      "attack": 20,
-      "cursed": null,
-      "special": "Item: casts Fizzle.",
-      "locations": ["Porthaven", "Ascantha"]
-    },
-    {
-      "name": "Poison Needle",
-      "price": 10,
-      "attack": 1,
-      "cursed": null,
-      "special": "1/8 chance of instant kill.",
-      "locations": ["Endor (Casino)"]
-    },
-    {
-      "name": "Razor-Wing Boomerang",
-      "price": 2900,
-      "attack": 25,
-      "cursed": null,
-      "special": "Hits all enemies.",
-      "locations": ["Ascantha"]
-    },
-    {
-      "name": "War Hammer",
-      "price": 4200,
+      "name": "Battle Axe",
+      "price": 5500,
       "attack": 50,
       "cursed": null,
       "special": null,
-      "locations": ["Ascantha", "Concheim"]
+      "locations": []
     },
     {
-      "name": "Spiked Steel Whip",
-      "price": 4500,
-      "attack": 45,
+      "name": "Staff of Antimagic",
+      "price": 4000,
+      "attack": 50,
       "cursed": null,
-      "special": "Hits a group of enemies.",
-      "locations": ["Concheim", "Strathbaile"]
+      "special": "Item: casts StopSpell",
+      "locations": ["Royal Crypt"]
+    },
+    {
+      "name": "Staff of Force",
+      "price": 2500,
+      "attack": 55,
+      "cursed": null,
+      "special": "Uses 3 MP per attack",
+      "locations": []
+    },
+    {
+      "name": "Sword of Lethargy",
+      "price": 8000,
+      "attack": 60,
+      "cursed": null,
+      "special": "Inflicts sleep on enemy; item: casts Sleepmore",
+      "locations": []
+    },
+    {
+      "name": "Fire Claw",
+      "price": 10000,
+      "attack": 60,
+      "cursed": null,
+      "special": "Item: casts FireBane",
+      "locations": ["Basement of Gardenbur castle"]
+    },
+    {
+      "name": "Magma Staff",
+      "price": 0,
+      "attack": 63,
+      "cursed": null,
+      "special": "Item: casts Boom",
+      "locations": ["Hidden in Santeem Castle"]
+    },
+    {
+      "name": "Zenithian Sword",
+      "price": 0,
+      "attack": 65,
+      "cursed": null,
+      "special": "Item: removes status ailments",
+      "locations": ["World Tree"]
+    },
+    {
+      "name": "Demon Hammer",
+      "price": 600,
+      "attack": 70,
+      "cursed": "1/3 critical hit chance, 2/3 miss",
+      "special": null,
+      "locations": []
+    },
+    {
+      "name": "Ice Blade",
+      "price": 800,
+      "attack": 75,
+      "cursed": null,
+      "special": "Item: casts Snowstorm",
+      "locations": ["Lakanaba in Chapter 5"]
     },
     {
       "name": "Dragon Killer",
       "price": 15000,
-      "attack": 77,
+      "attack": 90,
       "cursed": null,
-      "special": "Deals extra damage to dragons.",
-      "locations": ["Femiscyra", "Riverton"]
+      "special": "Deals extra damage to Dragons",
+      "locations": []
     },
     {
-      "name": "Staff of Thunder",
-      "price": 2500,
-      "attack": 30,
-      "cursed": null,
-      "special": "Item: casts Sizz.",
-      "locations": ["Strathbaile"]
-    },
-    {
-      "name": "Gigasteel Broadsword",
-      "price": 6500,
-      "attack": 60,
-      "cursed": null,
+      "name": "Multi-Edge Sword",
+      "price": 3300,
+      "attack": 99,
+      "cursed": "damages wielder",
       "special": null,
-      "locations": ["Riverton", "Royal Crypt"]
-    },
-    {
-      "name": "Fire Blade",
-      "price": 13000,
-      "attack": 80,
-      "cursed": null,
-      "special": "Item: casts Sizzle. Deals extra fire damage.",
-      "locations": ["Riverton"]
-    },
-    {
-      "name": "Ice Blade",
-      "price": 13000,
-      "attack": 80,
-      "cursed": null,
-      "special": "Item: casts Crackle. Deals extra ice damage.",
-      "locations": ["Riverton"]
+      "locations": ["Endor"]
     },
     {
       "name": "Sword of Miracles",
-      "price": 25000,
+      "price": 9500,
       "attack": 100,
       "cursed": null,
-      "special": "Heals user for 1/4 of damage dealt. Hero only.",
-      "locations": ["Nadiria", "Estark's Lair"]
+      "special": "Heals 1/4 HP on non-lethal hits",
+      "locations": ["Small Medal King", "6 medals"]
     },
     {
-      "name": "Falcon Blade",
-      "price": 25000,
-      "attack": 10,
-      "cursed": null,
-      "special": "Attacks twice.",
-      "locations": ["Endor (Casino Prize)", "Zenithia", "Final Dungeon"]
-    },
-    {
-      "name": "Golden Claw",
-      "price": 15000,
-      "attack": 55,
-      "cursed": "Increases encounter rate dramatically if in inventory.",
-      "special": "Alena only.",
-      "locations": ["Pyramid"]
-    },
-    {
-      "name": "Fire Claw",
-      "price": 9800,
-      "attack": 60,
-      "cursed": null,
-      "special": "Deals extra fire damage. Alena/Maya only.",
-      "locations": ["Royal Crypt"]
-    },
-    {
-      "name": "Hell Sabre",
-      "price": 30000,
-      "attack": 110,
-      "cursed": "Can inflict poison on user.",
-      "special": null,
-      "locations": ["Royal Crypt"]
-    },
-    {
-      "name": "Flail of Destruction",
-      "price": 18000,
-      "attack": 105,
-      "cursed": "Attacks random target including allies.",
-      "special": null,
-      "locations": ["Royal Crypt"]
-    },
-    {
-      "name": "Hela Hammer",
-      "price": 13000,
-      "attack": 90,
-      "cursed": "High chance to miss, high chance of critical hit.",
-      "special": null,
-      "locations": ["Royal Crypt"]
-    },
-    {
-      "name": "Sword of Gaia",
-      "price": 99999,
-      "attack": 80,
-      "cursed": null,
-      "special": "Required to open path to Mamon. Hero only.",
-      "locations": ["Mountain Bureas"]
-    },
-    {
-      "name": "Demon Spear",
-      "price": 12000,
-      "attack": 90,
-      "cursed": "Can inflict Sleep on user.",
-      "special": "Small chance of instant death.",
-      "locations": ["Mamon's Stronghold"]
-    },
-    {
-      "name": "Staff of Divine Wrath",
-      "price": 9800,
-      "attack": 60,
-      "cursed": null,
-      "special": "Item: casts Boom.",
-      "locations": ["Mountain Bureas"]
-    },
-    {
-      "name": "Staff of Salvation",
-      "price": 15000,
-      "attack": 40,
-      "cursed": null,
-      "special": "Item: casts Multiheal.",
-      "locations": ["Fountain of Purity"]
-    },
-    {
-      "name": "Staff of Revival",
-      "price": 99999,
-      "attack": 30,
-      "cursed": null,
-      "special": "Item: casts Zing.",
-      "locations": ["Fountain of Purity"]
-    },
-    {
-      "name": "Fan of Peace",
-      "price": 10000,
-      "attack": 60,
-      "cursed": null,
-      "special": "Maya only.",
-      "locations": ["Fountain of Purity"]
-    },
-    {
-      "name": "Flame Fan",
-      "price": 15000,
-      "attack": 90,
-      "cursed": null,
-      "special": "Item: casts Sizz. Maya only.",
-      "locations": ["Fountain of Purity"]
-    },
-    {
-      "name": "King's Sword",
-      "price": 32767,
+      "name": "Sword of Decimation",
+      "price": 200,
       "attack": 120,
-      "cursed": null,
-      "special": "Item: casts Zap. Hero only.",
-      "locations": ["Final Dungeon"]
+      "cursed": "user has 0 def Item: casts defence",
+      "special": null,
+      "locations": ["Konenbur"]
     },
     {
-      "name": "Sphere of Silence",
-      "price": 99999,
-      "attack": 50,
+      "name": "Metal Babble Sword",
+      "price": 0,
+      "attack": 130,
       "cursed": null,
-      "special": "Item: casts Whack. Female only.",
-      "locations": ["Fountain of Purity"]
-    },
-    {
-      "name": "Master Dragon Claw",
-      "price": 99999,
-      "attack": 90,
-      "cursed": null,
-      "special": "Alena only.",
-      "locations": ["Final Dungeon"]
+      "special": "Guaranteed damage to metal enemies",
+      "locations": ["Cascade Cave"]
     }
   ]
 }
