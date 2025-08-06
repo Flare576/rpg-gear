@@ -10,7 +10,7 @@
     },
     {
       "name": "Soldier",
-      "color": "#ff0000",
+      "color": "#ffa8a8",
       "armor": ["Basic Clothes","Wayfarer's Clothes","Leather Armor","Chain Mail","Fur Coat","Bronze Armor","Half Plate Armor","Full Plate Armor","Dragon Mail","Swordedge Armor","Metal Babble Armor","Zombie Mail","Demon Armor"],
       "shields": ["Leather Shield","Scale Shield","Iron Shield","Dragon Shield","Shield of Strength","Aeolus Shield","Mirror Shield"],
       "helmets": ["Leather Hat","Wooden Hat","Iron Helm","Iron Mask","Mask of Corruption","Metal Babble Helm"],

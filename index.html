@@ -62,6 +62,9 @@
         background-color: #ffe6e6; /* Light red for unavailable items */
         color: #aaa;
       }
+      .has-special {
+        background-color: #a6ffa6; /* Brighter green */
+      }
       .item-cursed {
         background-color: #e74c3c; /* A distinct red for warnings */
         color: #ffffff; /* White text for contrast */
@@ -143,6 +146,7 @@
     <div style="text-align: center; margin-bottom: 20px;">
       <label for="gameSelection">Select Game:</label>
       <select id="gameSelection">
+        <option value="dw2">Dragon Quest II</option>
         <option value="dw3">Dragon Quest III</option>
         <option value="dw4" selected>Dragon Quest IV</option>
       </select>
@@ -276,9 +280,12 @@
         let gameTitle = '';
         let jsonPath = '';
 
-        if (gameId === 'dw3') {
+        if (gameId === 'dw2') {
+          gameTitle = 'Dragon Quest II';
+          jsonPath = 'dat/dw2.json';
+        } else if (gameId === 'dw3') {
           gameTitle = 'Dragon Quest III';
-          jsonPath = 'dat/dw3.json';
+          jsonPath = 'dat/dw4.json';
         } else if (gameId === 'dw4') {
           gameTitle = 'Dragon Quest IV';
           jsonPath = 'dat/dw4.json';
@@ -366,6 +373,8 @@
                   cell.textContent = item[nameField];
                   if (isCursed) {
                     cell.classList.add('item-cursed');
+                  } else if (item.special) {
+                    cell.classList.add('has-special');
                   } else {
                     cell.classList.add('item-available');
                   }

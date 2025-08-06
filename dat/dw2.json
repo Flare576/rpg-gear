@@ -1,0 +1,375 @@
+{
+  "classes": [
+    {
+      "name": "Hero",
+      "color": "#6495ed",
+      "armor": [ "Clothes", "Leather Armor", "Chain Mail", "Clothes Hiding", "Full Plate Armor", "Magic Armor", "Mink Coat", "Water Flying Cloth", "Armor of Gaia", "Armor of Erdrick", "Gremlin's Armor" ],
+      "shields": [ "Leather Shield", "Steel Shield", "Shield of Strength", "Shield of Erdrick", "Evil Shield" ],
+      "weapons": [ "Bamboo Stick", "Club", "Copper Sword", "Magic Knife", "Chain Sickle", "Iron Spear", "Broad Sword", "Wizard's Wand", "Giant's Hammer", "Sword of Erdrick", "Dragon Killer", "Light Sword", "Staff of Thunder", "Falcon Sword", "Thunder Sword", "Sword of Destruction" ]
+    },
+    {
+      "name": "Prince",
+      "color": "#55dd55",
+      "armor": [ "Clothes", "Leather Armor", "Chain Mail", "Clothes Hiding", "Magic Armor", "Mink Coat", "Water Flying Cloth", "Gremlin's Armor" ],
+      "shields": [ "Leather Shield", "Shield of Strength" ],
+      "weapons": [ "Bamboo Stick", "Club", "Copper Sword", "Magic Knife", "Chain Sickle", "Iron Spear", "Wizard's Wand", "Staff of Thunder", "Falcon Sword" ]
+    },
+    {
+      "name": "Princess",
+      "color": "#ffc0cb",
+      "armor": [ "Clothes", "Clothes Hiding", "Mink Coat", "Water Flying Cloth" ],
+      "shields": [],
+      "weapons": [ "Bamboo Stick", "Magic Knife", "Wizard's Wand", "Staff of Thunder" ]
+    }
+  ],
+  "armor": [
+    {
+      "name": "Clothes",
+      "short": "Clothes",
+      "price": null,
+      "defense": 2,
+      "cursed": null,
+      "special": null,
+      "locations": ["Princess"]
+    },
+    {
+      "name": "Leather Armor",
+      "short": "Leather",
+      "price": null,
+      "defense": 6,
+      "cursed": null,
+      "special": null,
+      "locations": ["Prince"]
+    },
+    {
+      "name": "Chain Mail",
+      "short": "Chain",
+      "price": 480,
+      "defense": 12,
+      "cursed": null,
+      "special": null,
+      "locations": ["Leftwyne", "Hamlin"]
+    },
+    {
+      "name": "Clothes Hiding",
+      "short": "Hiding",
+      "price": 1250,
+      "defense": 20,
+      "cursed": null,
+      "special": null,
+      "locations": ["Lianport", "Tantegel", "Osterfair"]
+    },
+    {
+      "name": "Full Plate Armor",
+      "short": "Full",
+      "price": 1000,
+      "defense": 25,
+      "cursed": null,
+      "special": null,
+      "locations": ["Hamlin", "Lianport"]
+    },
+    {
+      "name": "Magic Armor",
+      "short": "Magic",
+      "price": 4300,
+      "defense": 25,
+      "cursed": null,
+      "special": null,
+      "locations": ["Osterfair", "Tuhn"]
+    },
+    {
+      "name": "Mink Coat",
+      "short": "Mink",
+      "price": 65000,
+      "defense": 30,
+      "cursed": null,
+      "special": null,
+      "locations": ["Wellgarth"]
+    },
+    {
+      "name": "Water Flying Cloth",
+      "short": "Water",
+      "price": null,
+      "defense": 35,
+      "cursed": null,
+      "special": "Protects from Swamps and Fire Attacks",
+      "locations": ["Tuhn"]
+    },
+    {
+      "name": "Armor of Gaia",
+      "short": "Gaia",
+      "price": null,
+      "defense": 35,
+      "cursed": null,
+      "special": null,
+      "locations": ["Osterfair"]
+    },
+    {
+      "name": "Armor of Erdrick",
+      "short": "Erdrick",
+      "price": null,
+      "defense": 40,
+      "cursed": null,
+      "special": "Protects from Swamps and Barriers",
+      "locations": ["Cave to Rhone"]
+    },
+    {
+      "name": "Gremlin's Armor",
+      "short": "Gremlin",
+      "price": null,
+      "defense": 50,
+      "cursed": "is cursed",
+      "special": null,
+      "locations": ["Gold Batboons"]
+    }
+  ],
+  "shields": [
+    {
+      "name": "Leather Shield",
+      "short": "Leather",
+      "price": 90,
+      "defense": 4,
+      "cursed": null,
+      "special": null,
+      "locations": [
+        "Leftwyne"
+      ]
+    },
+    {
+      "name": "Steel Shield",
+      "short": "Steel",
+      "price": 2000,
+      "defense": 10,
+      "cursed": null,
+      "special": null,
+      "locations": [
+        "Hamlin",
+        "Lianport",
+        "Tantegel",
+        "Beran"
+      ]
+    },
+    {
+      "name": "Shield of Strength",
+      "short": "Strength",
+      "price": 21500,
+      "defense": 18,
+      "cursed": null,
+      "special": "Item: Cast Healmore",
+      "locations": [
+        "Wellgarth",
+        "Tuhn",
+        "Beran"
+      ]
+    },
+    {
+      "name": "Shield of Erdrick",
+      "short": "Erdrick",
+      "price": null,
+      "defense": 20,
+      "cursed": null,
+      "special": null,
+      "locations": [
+        "Cannock Castle"
+      ]
+    },
+    {
+      "name": "Evil Shield",
+      "short": "Evil",
+      "price": null,
+      "defense": 30,
+      "cursed": "is cursed",
+      "special": null,
+      "locations": [
+        "Dark Eyes"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Bamboo Stick",
+      "short": "Bamboo Stick",
+      "price": null,
+      "attack": 2,
+      "cursed": null,
+      "special": null,
+      "locations": [ "Princess" ]
+    },
+    {
+      "name": "Club",
+      "short": "Club",
+      "price": 60,
+      "attack": 8,
+      "cursed": null,
+      "special": null,
+      "locations": [ "Leftwyne" ]
+    },
+    {
+      "name": "Copper Sword",
+      "short": "Copper Sword",
+      "price": 100,
+      "attack": 10,
+      "cursed": null,
+      "special": null,
+      "locations": [ "Leftwyne" ]
+    },
+    {
+      "name": "Magic Knife",
+      "short": "Magic Knife",
+      "price": 200,
+      "attack": 12,
+      "cursed": null,
+      "special": null,
+      "locations": [
+        "Leftwyne",
+        "Lianport"
+      ]
+    },
+    {
+      "name": "Chain Sickle",
+      "short": "Chain Sickle",
+      "price": 390,
+      "attack": 15,
+      "cursed": null,
+      "special": null,
+      "locations": [
+        "Leftwyne",
+        "Hamlin"
+      ]
+    },
+    {
+      "name": "Iron Spear",
+      "short": "Iron Spear",
+      "price": 770,
+      "attack": 20,
+      "cursed": null,
+      "special": null,
+      "locations": [
+        "Hamlin"
+        ]
+    },
+    {
+      "name": "Broad Sword",
+      "short": "Broad Sword",
+      "price": 1500,
+      "attack": 30,
+      "cursed": null,
+      "special": null,
+      "locations": [
+        "Hamlin",
+        "Lianport",
+        "Tantegel",
+        "Osterfair"
+      ]
+    },
+    {
+      "name": "Wizard's Wand",
+      "short": "Wizard's Wand",
+      "price": 2500,
+      "attack": 8,
+      "cursed": null,
+      "special": "Item: Cast Firebal",
+      "locations": [
+        "Lianport",
+        "Tantegel",
+        "Tuhn",
+        "Beran"
+      ]
+    },
+    {
+      "name": "Giant's Hammer",
+      "short": "Giant's Hammer",
+      "price": 4000,
+      "attack": 35,
+      "cursed": null,
+      "special": null,
+      "locations": [
+        "Tantegel",
+        "Osterfair",
+        "Wellgarth",
+        "Beran"
+      ]
+    },
+    {
+      "name": "Sword of Erdrick",
+      "short": "Erdrick",
+      "price": null,
+      "attack": 40,
+      "cursed": null,
+      "special": null,
+      "locations": [
+        "Charlock Castle"
+        ]
+    },
+    {
+      "name": "Dragon Killer",
+      "short": "Dragon Killer",
+      "price": 8000,
+      "attack": 50,
+      "cursed": null,
+      "special": null,
+      "locations": [
+        "Osterfair",
+        "Wellgarth",
+        "Tuhn",
+        "Beran"
+      ]
+    },
+    {
+      "name": "Light Sword",
+      "short": "Light Sword",
+      "price": 16000,
+      "attack": 65,
+      "cursed": null,
+      "special": null,
+      "locations": [
+        "Wellgarth"
+      ]
+    },
+    {
+      "name": "Staff of Thunder",
+      "short": "Thunder",
+      "price": null,
+      "attack": 15,
+      "cursed": null,
+      "special": "Item: Cast Infernos",
+      "locations": [
+        "Midenhall"
+      ]
+    },
+    {
+      "name": "Falcon Sword",
+      "short": "Falcon Sword",
+      "price": 25000,
+      "attack": 5,
+      "cursed": null,
+      "special": "Attack twice",
+      "locations": [
+        "Tuhn"
+      ]
+    },
+    {
+      "name": "Thunder Sword",
+      "short": "Thunder Sword",
+      "price": null,
+      "attack": 80,
+      "cursed": null,
+      "special": "Item: Cast Infernos",
+      "locations": [
+        "Rhone"
+      ]
+    },
+    {
+      "name": "Sword of Destruction",
+      "short": "Destruction",
+      "price": null,
+      "attack": 93,
+      "cursed": "Lose HP when you attack",
+      "special": null,
+      "locations": [
+        "Giants",
+        "Green Dragons"
+      ]
+    }
+  ]
+}
