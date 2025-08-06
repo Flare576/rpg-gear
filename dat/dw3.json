@@ -3,49 +3,49 @@
     {
       "name": "Hero",
       "color": "#6495ed",
-      "armor": ["Clothes","Wayfayer's Clothes","Animal Suit","Leather Armor","Shell Armor","Chain Mail","Cloak of Evasion","Half Plate Armor","Full Plate Armor","Magic Armor","Dragon Mail","Armor of Terrafirma","Swordedge Armor","Armor of Hades","Armor of Radiance"],
+      "armor": ["Clothes","Wayfarer's Clothes","Animal Suit","Leather Armor","Shell Armor","Chain Mail","Cloak of Evasion","Half Plate Armor","Full Plate Armor","Magic Armor","Dragon Mail","Armor of Terrafirma","Swordedge Armor","Armor of Hades","Armor of Radiance"],
       "shields": ["Shield of Sorrow","Leather Shield","Bronze Shield","Iron Shield","Silver Shield","Shield of Strength","Shield of Heroes"],
       "helmets": ["Leather Helmet","Golden Crown","Iron Helmet","Iron Mask"],
       "weapons": ["Cypress Stick","Falcon Sword","Club","Copper Sword","Magic Knife","Thorn Whip","Chain Sickle","Iron Spear","Broad Sword","Battle Axe","Sword of Gaia","Orochi Sword","Zombie Slasher","Dragon Killer","Snowblast Sword","Thunder Sword","Thor's Sword","Multi-Edge Sword","Sword of Destruction","Sword of Kings"]
     }, {
       "name": "Soldier",
-      "color": "#ff0000",
-      "armor": ["Clothes","Wayfayer's Clothes","Animal Suit","Leather Armor","Shell Armor","Chain Mail","Cloak of Evasion","Fighting Suit","Half Plate Armor","Full Plate Armor","Magic Armor","Dragon Mail","Armor of Terrafirma","Swordedge Armor","Armor of Hades"],
+      "color": "#ffa8a8",
+      "armor": ["Clothes","Wayfarer's Clothes","Animal Suit","Leather Armor","Shell Armor","Chain Mail","Cloak of Evasion","Fighting Suit","Half Plate Armor","Full Plate Armor","Magic Armor","Dragon Mail","Armor of Terrafirma","Swordedge Armor","Armor of Hades"],
       "shields": ["Shield of Sorrow","Leather Shield","Bronze Shield","Iron Shield","Silver Shield","Shield of Strength"],
       "helmets": ["Leather Helmet","Golden Crown","Iron Helmet","Iron Mask"],
       "weapons": ["Cypress Stick","Club","Copper Sword","Magic Knife","Thorn Whip","Chain Sickle","Iron Spear","Broad Sword","Battle Axe","Giant Shears","Sword of Gaia","Sword of Illusion","Sledge Hammer","Orochi Sword","Zombie Slasher","Dragon Killer","Snowblast Sword","Thunder Sword","Demon Axe","Thor's Sword","Multi-Edge Sword","Sword of Destruction"]
     }, {
       "name": "Merchant",
       "color": "#ffffe0",
-      "armor": ["Clothes","Wayfayer's Clothes","Animal Suit","Leather Armor","Shell Armor","Chain Mail","Cloak of Evasion","Iron Apron","Fighting Suit","Half Plate Armor"],
+      "armor": ["Clothes","Wayfarer's Clothes","Animal Suit","Leather Armor","Shell Armor","Chain Mail","Cloak of Evasion","Iron Apron","Fighting Suit","Half Plate Armor"],
       "shields": ["Leather Shield","Bronze Shield","Iron Shield"],
       "helmets": ["Leather Helmet","Golden Crown","Mysterious Hat","Turban"],
       "weapons": ["Cypress Stick","Club","Copper Sword","Thorn Whip","Chain Sickle","Iron Spear","Broad Sword","Battle Axe","Sword of Illusion","Zombie Slasher"]
     }, {
       "name": "Goof",
-      "color": "#ff00ff",
-      "armor": ["Clothes","Wayfayer's Clothes","Animal Suit","Training Suit","Cloak of Evasion","Flashy Clothes"],
+      "color": "#dd55dd",
+      "armor": ["Clothes","Wayfarer's Clothes","Animal Suit","Training Suit","Cloak of Evasion","Flashy Clothes"],
       "shields": ["Leather Shield"],
       "helmets": ["Leather Helmet","Golden Crown","Mysterious Hat","Turban"],
       "weapons": ["Cypress Stick","Club","Copper Sword","Magic Knife","Thorn Whip","Chain Sickle","Iron Spear","Battle Axe","Sword of Illusion"]
     }, {
       "name": "Pilgrim",
-      "color": "#000000",
-      "armor": ["Clothes","Wayfayer's Clothes","Animal Suit","Leather Armor","Shell Armor","Chain Mail","Cloak of Evasion","Sacred Robe","Angel's Robe","Magic Armor"],
+      "color": "#ffffff",
+      "armor": ["Clothes","Wayfarer's Clothes","Animal Suit","Leather Armor","Shell Armor","Chain Mail","Cloak of Evasion","Sacred Robe","Angel's Robe","Magic Armor"],
       "shields": ["Leather Shield","Bronze Shield","Silver Shield"],
       "helmets": ["Leather Helmet","Golden Crown","Mysterious Hat","Iron Helmet"],
       "weapons": ["Cypress Stick","Club","Copper Sword","Magic Knife","Staff of Rain","Chain Sickle","Iron Spear","Staff of Reflection","Staff of Judgement","Staff of Force","Zombie Slasher"]
     }, {
       "name": "Sage",
-      "color": "#00ff00",
-      "armor": ["Clothes","Wayfayer's Clothes","Animal Suit","Training Suit","Leather Armor","Shell Armor","Chain Mail","Cloak of Evasion","Fighting Suit","Sacred Robe","Angel's Robe","Magic Armor"],
+      "color": "#55dd55",
+      "armor": ["Clothes","Wayfarer's Clothes","Animal Suit","Training Suit","Leather Armor","Shell Armor","Chain Mail","Cloak of Evasion","Fighting Suit","Sacred Robe","Angel's Robe","Magic Armor"],
       "shields": ["Leather Shield","Bronze Shield","Silver Shield"],
       "helmets": ["Leather Helmet","Golden Crown","Mysterious Hat","Iron Helmet"],
       "weapons": ["Cypress Stick","Falcon Sword","Club","Copper Sword","Wizard's Wand","Staff of Rain","Chain Sickle","Iron Spear","Staff of Thunder","Broad Sword","Staff of Reflection","Staff of Judgement","Staff of Force","Zombie Slasher"]
     }, {
       "name": "Wizard",
       "color": "#fff2cc",
-      "armor": ["Clothes","Wayfayer's Clothes","Animal Suit","Cloak of Evasion","Angel's Robe","Water Flying Clothes"],
+      "armor": ["Clothes","Wayfarer's Clothes","Animal Suit","Cloak of Evasion","Angel's Robe","Water Flying Clothes"],
       "shields": [],
       "helmets": ["Leather Helmet","Golden Crown","Mysterious Hat"],
       "weapons": ["Poison Needle","Cypress Stick","Magic Knife","Wizard's Wand","Staff of Rain","Staff of Thunder","Staff of Reflection","Staff of Force"]
@@ -61,6 +61,7 @@
   "armor": [
     {
       "name": "Clothes",
+      "short": "Clothes",
       "price": 10,
       "defense": 4,
       "cursed": null,
@@ -68,7 +69,8 @@
       "locations": ["Aliahan", "Soo", "Tower of Arp", "Hork"]
     },
     {
-      "name": "Wayfayer's Clothes",
+      "name": "Wayfarer's Clothes",
+      "short": "Way",
       "price": 70,
       "defense": 8,
       "cursed": null,
@@ -77,6 +79,7 @@
     },
     {
       "name": "Animal Suit",
+      "short": "Animal",
       "price": 350,
       "defense": 8,
       "cursed": null,
@@ -85,6 +88,7 @@
     },
     {
       "name": "Training Suit",
+      "short": "Training",
       "price": 80,
       "defense": 10,
       "cursed": null,
@@ -93,6 +97,7 @@
     },
     {
       "name": "Leather Armor",
+      "short": "Leather",
       "price": 150,
       "defense": 12,
       "cursed": null,
@@ -101,6 +106,7 @@
     },
     {
       "name": "Shell Armor",
+      "short": "Shell",
       "price": 300,
       "defense": 16,
       "cursed": null,
@@ -109,6 +115,7 @@
     },
     {
       "name": "Chain Mail",
+      "short": "Chain",
       "price": 480,
       "defense": 20,
       "cursed": null,
@@ -117,6 +124,7 @@
     },
     {
       "name": "Cloak of Evasion",
+      "short": "Cloak",
       "price": 2900,
       "defense": 20,
       "cursed": null,
@@ -125,6 +133,7 @@
     },
     {
       "name": "Iron Apron",
+      "short": "Apron",
       "price": 700,
       "defense": 22,
       "cursed": null,
@@ -133,6 +142,7 @@
     },
     {
       "name": "Fighting Suit",
+      "short": "Fighting",
       "price": 800,
       "defense": 23,
       "cursed": null,
@@ -141,6 +151,7 @@
     },
     {
       "name": "Half Plate Armor",
+      "short": "Half",
       "price": 1100,
       "defense": 25,
       "cursed": null,
@@ -149,6 +160,7 @@
     },
     {
       "name": "Flashy Clothes",
+      "short": "Flashy",
       "price": 1300,
       "defense": 28,
       "cursed": null,
@@ -157,6 +169,7 @@
     },
     {
       "name": "Sacred Robe",
+      "short": "Sacred",
       "price": 4400,
       "defense": 30,
       "cursed": null,
@@ -165,6 +178,7 @@
     },
     {
       "name": "Full Plate Armor",
+      "short": "Full",
       "price": 2400,
       "defense": 32,
       "cursed": null,
@@ -173,6 +187,7 @@
     },
     {
       "name": "Angel's Robe",
+      "short": "Angel",
       "price": 3000,
       "defense": 35,
       "cursed": null,
@@ -181,6 +196,7 @@
     },
     {
       "name": "Water Flying Clothes",
+      "short": "Water Fly",
       "price": 12500,
       "defense": 40,
       "cursed": null,
@@ -189,6 +205,7 @@
     },
     {
       "name": "Magic Armor",
+      "short": "Magic",
       "price": 5800,
       "defense": 40,
       "cursed": null,
@@ -197,6 +214,7 @@
     },
     {
       "name": "Dragon Mail",
+      "short": "Dragon",
       "price": 9800,
       "defense": 45,
       "cursed": null,
@@ -205,6 +223,7 @@
     },
     {
       "name": "Armor of Terrafirma",
+      "short": "Terrafirma",
       "price": 99999,
       "defense": 50,
       "cursed": null,
@@ -213,6 +232,7 @@
     },
     {
       "name": "Swordedge Armor",
+      "short": "Swordedge",
       "price": 99999,
       "defense": 55,
       "cursed": null,
@@ -221,6 +241,7 @@
     },
     {
       "name": "Armor of Hades",
+      "short": "Hades",
       "price": 7000,
       "defense": 65,
       "cursed": "33% chance to immobolize wearer every time Attack command is used. Reduces all magic damage down to 1/4 + 1.",
@@ -229,6 +250,7 @@
     },
     {
       "name": "Armor of Radiance",
+      "short": "Radiance",
       "price": 99999,
       "defense": 75,
       "cursed": null,
@@ -239,6 +261,7 @@
   "shields": [
     {
       "name": "Shield of Sorrow",
+      "short": "Sorrow",
       "price": 10,
       "defense": 35,
       "cursed": "Physical attack damage reduced to 1/2 if neither the Cloak of Evasion or Swordedge Armor are being worn. Another random party member will then receive the other half of the damage, if the Shield of Sorrow user isn't wearing a Cloak of Evasion.",
@@ -247,6 +270,7 @@
     },
     {
       "name": "Leather Shield",
+      "short": "Leather",
       "price": 90,
       "defense": 4,
       "cursed": null,
@@ -255,6 +279,7 @@
     },
     {
       "name": "Bronze Shield",
+      "short": "Bronze",
       "price": 180,
       "defense": 7,
       "cursed": null,
@@ -263,6 +288,7 @@
     },
     {
       "name": "Iron Shield",
+      "short": "Iron",
       "price": 700,
       "defense": 12,
       "cursed": null,
@@ -271,6 +297,7 @@
     },
     {
       "name": "Silver Shield",
+      "short": "Silver",
       "price": 8800,
       "defense": 30,
       "cursed": null,
@@ -279,6 +306,7 @@
     },
     {
       "name": "Shield of Strength",
+      "short": "Strength",
       "price": 15000,
       "defense": 40,
       "cursed": null,
@@ -287,6 +315,7 @@
     },
     {
       "name": "Shield of Heroes",
+      "short": "Heroes",
       "price": 99999,
       "defense": 50,
       "cursed": null,
@@ -297,6 +326,7 @@
   "helmets": [
     {
       "name": "Leather Helmet",
+      "short": "Leather",
       "price": 80,
       "defense": 2,
       "cursed": null,
@@ -305,6 +335,7 @@
     },
     {
       "name": "Golden Crown",
+      "short": "Crown",
       "price": 99999,
       "defense": 6,
       "cursed": null,
@@ -313,6 +344,7 @@
     },
     {
       "name": "Mysterious Hat",
+      "short": "Myst.",
       "price": 8,
       "defense": 8,
       "cursed": null,
@@ -321,6 +353,7 @@
     },
     {
       "name": "Turban",
+      "short": "Turban",
       "price": 160,
       "defense": 8,
       "cursed": null,
@@ -329,6 +362,7 @@
     },
     {
       "name": "Iron Helmet",
+      "short": "Iron",
       "price": 2000,
       "defense": 16,
       "cursed": null,
@@ -337,6 +371,7 @@
     },
     {
       "name": "Iron Mask",
+      "short": "Mask",
       "price": 3500,
       "defense": 25,
       "cursed": null,
@@ -347,6 +382,7 @@
   "weapons": [
     {
       "name": "Poison Needle",
+      "short": "Needle",
       "price": 10,
       "attack": 1,
       "cursed": null,
@@ -355,6 +391,7 @@
     },
     {
       "name": "Cypress Stick",
+      "short": "Cypress",
       "price": 5,
       "attack": 2,
       "cursed": null,
@@ -363,6 +400,7 @@
     },
     {
       "name": "Falcon Sword",
+      "short": "Falcon",
       "price": 25000,
       "attack": 5,
       "cursed": null,
@@ -371,6 +409,7 @@
     },
     {
       "name": "Club",
+      "short": "Club",
       "price": 30,
       "attack": 7,
       "cursed": null,
@@ -379,6 +418,7 @@
     },
     {
       "name": "Copper Sword",
+      "short": "Copper",
       "price": 100,
       "attack": 12,
       "cursed": null,
@@ -387,6 +427,7 @@
     },
     {
       "name": "Magic Knife",
+      "short": "Magic",
       "price": 200,
       "attack": 14,
       "cursed": null,
@@ -395,6 +436,7 @@
     },
     {
       "name": "Wizard's Wand",
+      "short": "Wand",
       "price": 1500,
       "attack": 15,
       "cursed": null,
@@ -403,6 +445,7 @@
     },
     {
       "name": "Staff of Rain",
+      "short": "St.Rain",
       "price": 99999,
       "attack": 16,
       "cursed": null,
@@ -411,6 +454,7 @@
     },
     {
       "name": "Thorn Whip",
+      "short": "Thorn",
       "price": 320,
       "attack": 18,
       "cursed": null,
@@ -419,6 +463,7 @@
     },
     {
       "name": "Chain Sickle",
+      "short": "Sickle",
       "price": 550,
       "attack": 24,
       "cursed": null,
@@ -427,6 +472,7 @@
     },
     {
       "name": "Iron Spear",
+      "short": "Spear",
       "price": 750,
       "attack": 28,
       "cursed": null,
@@ -435,6 +481,7 @@
     },
     {
       "name": "Iron Claw",
+      "short": "Iron Claw",
       "price": 770,
       "attack": 30,
       "cursed": null,
@@ -443,6 +490,7 @@
     },
     {
       "name": "Staff of Thunder",
+      "short": "St.Thunder",
       "price": 2500,
       "attack": 30,
       "cursed": null,
@@ -451,6 +499,7 @@
     },
     {
       "name": "Broad Sword",
+      "short": "Broad",
       "price": 1500,
       "attack": 33,
       "cursed": null,
@@ -459,6 +508,7 @@
     },
     {
       "name": "Staff of Reflection",
+      "short": "St.Reflect.",
       "price": 7000,
       "attack": 33,
       "cursed": null,
@@ -467,6 +517,7 @@
     },
     {
       "name": "Staff of Judgement",
+      "short": "St.Judge.",
       "price": 2700,
       "attack": 35,
       "cursed": null,
@@ -475,6 +526,7 @@
     },
     {
       "name": "Battle Axe",
+      "short": "Axe",
       "price": 2500,
       "attack": 40,
       "cursed": null,
@@ -483,6 +535,7 @@
     },
     {
       "name": "Giant Shears",
+      "short": "Shears",
       "price": 3700,
       "attack": 48,
       "cursed": null,
@@ -491,6 +544,7 @@
     },
     {
       "name": "Sword of Gaia",
+      "short": "Gaia",
       "price": 99999,
       "attack": 48,
       "cursed": null,
@@ -499,6 +553,7 @@
     },
     {
       "name": "Sword of Illusion",
+      "short": "Illusion",
       "price": 99999,
       "attack": 50,
       "cursed": null,
@@ -507,6 +562,7 @@
     },
     {
       "name": "Staff of Force",
+      "short": "St.Force",
       "price": 2500,
       "attack": 55,
       "cursed": null,
@@ -515,6 +571,7 @@
     },
     {
       "name": "Sledge Hammer",
+      "short": "Sledge",
       "price": 6500,
       "attack": 55,
       "cursed": null,
@@ -523,6 +580,7 @@
     },
     {
       "name": "Golden Claw",
+      "short": "Golden Claw",
       "price": 15000,
       "attack": 55,
       "cursed": "It dramatically increases encounter rate, even if unequipped.",
@@ -531,6 +589,7 @@
     },
     {
       "name": "Orochi Sword",
+      "short": "Orochi",
       "price": 1000,
       "attack": 63,
       "cursed": null,
@@ -539,6 +598,7 @@
     },
     {
       "name": "Zombie Slasher",
+      "short": "Zombie",
       "price": 9800,
       "attack": 65,
       "cursed": null,
@@ -547,6 +607,7 @@
     },
     {
       "name": "Dragon Killer",
+      "short": "Dragon",
       "price": 15000,
       "attack": 77,
       "cursed": null,
@@ -555,6 +616,7 @@
     },
     {
       "name": "Snowblast Sword",
+      "short": "Snowblast",
       "price": 15000,
       "attack": 80,
       "cursed": null,
@@ -563,6 +625,7 @@
     },
     {
       "name": "Thunder Sword",
+      "short": "Thunder",
       "price": 7500,
       "attack": 85,
       "cursed": null,
@@ -571,6 +634,7 @@
     },
     {
       "name": "Demon Axe",
+      "short": "Demon",
       "price": 500,
       "attack": 90,
       "cursed": "It misses very often and 12.5% chance of critical hit.",
@@ -579,6 +643,7 @@
     },
     {
       "name": "Thor's Sword",
+      "short": "Thor",
       "price": 43690,
       "attack": 95,
       "cursed": null,
@@ -587,6 +652,7 @@
     },
     {
       "name": "Multi-Edge Sword",
+      "short": "Multi",
       "price": 5000,
       "attack": 100,
       "cursed": "Deals damage to both user and enemy",
@@ -595,6 +661,7 @@
     },
     {
       "name": "Sword of Destruction",
+      "short": "Destruction",
       "price": 45000,
       "attack": 110,
       "cursed": "The user gets stunned randomly",
@@ -603,6 +670,7 @@
     },
     {
       "name": "Sword of Kings",
+      "short": "Kings",
       "price": 32767,
       "attack": 120,
       "cursed": null,

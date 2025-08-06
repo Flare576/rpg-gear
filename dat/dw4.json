@@ -34,7 +34,7 @@
     },
     {
       "name": "Chancellor",
-      "color": "#000080",
+      "color": "#8844F0",
       "armor": ["Basic Clothes","Wayfarer's Clothes","Leather Armor","Chain Mail","Fur Coat","Bronze Armor","Half Plate Armor","Sacred Robe","Metal Babble Armor","Robe of Serenity","Mysterious Bolero"],
       "shields": ["Leather Shield","Scale Shield","Iron Shield","Shield of Strength","Mirror Shield","Metal Babble Shield"],
       "helmets": ["Leather Hat","Wooden Hat","Iron Helm","Mask of Corruption","Hat of Happiness","Metal Babble Helm"],
@@ -42,7 +42,7 @@
     },
     {
       "name": "Fortune Teller",
-      "color": "#800080",
+      "color": "#ff88ff",
       "armor": ["Basic Clothes","Wayfarer's Clothes","Silk Robe","Leather Dress","Fur Coat","Bronze Armor","Half Plate Armor","Sacred Robe","Pink Leotard","Metal Babble Armor","Water Flying Clothes","Robe of Serenity","Mysterious Bolero","Dress of Radiance"],
       "shields": ["Leather Shield","Scale Shield","Iron Shield","Metal Babble Shield"],
       "helmets": ["Leather Hat","Wooden Hat","Feather Hat","Golden Barrette","Mask of Corruption","Hat of Happiness","Metal Babble Helm"],
@@ -72,7 +72,8 @@
       "defense": 4,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Clothes"
     },
     {
       "name": "Wayfarer's Clothes",
@@ -80,7 +81,8 @@
       "defense": 7,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Way"
     },
     {
       "name": "Dancer's Costume",
@@ -88,7 +90,8 @@
       "defense": 8,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Costume"
     },
     {
       "name": "Silk Robe",
@@ -96,7 +99,8 @@
       "defense": 10,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Silk"
     },
     {
       "name": "Leather Armor",
@@ -104,7 +108,8 @@
       "defense": 12,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Leather"
     },
     {
       "name": "Leather Dress",
@@ -112,7 +117,8 @@
       "defense": 14,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Dress"
     },
     {
       "name": "Chain Mail",
@@ -120,7 +126,8 @@
       "defense": 18,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Chain"
     },
     {
       "name": "Fur Coat",
@@ -128,7 +135,8 @@
       "defense": 22,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Fur"
     },
     {
       "name": "Bronze Armor",
@@ -136,7 +144,8 @@
       "defense": 25,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Bronze"
     },
     {
       "name": "Cloak of Evasion",
@@ -144,7 +153,8 @@
       "defense": 28,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Evasion"
     },
     {
       "name": "Half Plate Armor",
@@ -152,7 +162,8 @@
       "defense": 30,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Half"
     },
     {
       "name": "Iron Apron",
@@ -160,7 +171,8 @@
       "defense": 32,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Apron"
     },
     {
       "name": "Robe of Serenity",
@@ -168,7 +180,8 @@
       "defense": 33,
       "cursed": null,
       "special": "While asleep In battle, defense is increased",
-      "locations": ["Cave of Padequia"]
+      "locations": ["Cave of Padequia"],
+      "short": "Serenity"
     },
     {
       "name": "Full Plate Armor",
@@ -176,7 +189,8 @@
       "defense": 35,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Full"
     },
     {
       "name": "Mysterious Bolero",
@@ -184,7 +198,8 @@
       "defense": 37,
       "cursed": null,
       "special": "Absorbs MP of spells cast on wearer",
-      "locations": ["Zenithian Tower"]
+      "locations": ["Zenithian Tower"],
+      "short": "Myst."
     },
     {
       "name": "Sacred Robe",
@@ -192,7 +207,8 @@
       "defense": 38,
       "cursed": null,
       "special": "Reduces Fire and Ice damage",
-      "locations": []
+      "locations": [],
+      "short": "Sacred"
     },
     {
       "name": "Pink Leotard",
@@ -200,7 +216,8 @@
       "defense": 40,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Pink"
     },
     {
       "name": "Water Flying Clothes",
@@ -208,7 +225,8 @@
       "defense": 41,
       "cursed": null,
       "special": "Reduces Fire and Dragonbreath damage",
-      "locations": []
+      "locations": [],
+      "short": "Water"
     },
     {
       "name": "Dragon Mail",
@@ -216,7 +234,8 @@
       "defense": 45,
       "cursed": null,
       "special": "Reduces Dragonbreath damage",
-      "locations": []
+      "locations": [],
+      "short": "Dragon"
     },
     {
       "name": "Dress of Radiance",
@@ -224,7 +243,8 @@
       "defense": 45,
       "cursed": null,
       "special": "Bounces spells back at caster",
-      "locations": ["Shrine of Horn", "Final Cave"]
+      "locations": ["Shrine of Horn", "Final Cave"],
+      "short": "Radiance"
     },
     {
       "name": "Zombie Mail",
@@ -232,7 +252,8 @@
       "defense": 49,
       "cursed": "reduces wearer's HP with every step",
       "special": null,
-      "locations": ["Den of Ramdivice"]
+      "locations": ["Den of Ramdivice"],
+      "short": "Zombie"
     },
     {
       "name": "Swordedge Armor",
@@ -240,7 +261,8 @@
       "defense": 50,
       "cursed": null,
       "special": "Enemies are damaged when they attack wearer",
-      "locations": []
+      "locations": [],
+      "short": "Swordedge"
     },
     {
       "name": "Demon Armor",
@@ -248,7 +270,8 @@
       "defense": 60,
       "cursed": "sets Agility to zero",
       "special": null,
-      "locations": ["Final Cave"]
+      "locations": ["Final Cave"],
+      "short": "Demon"
     },
     {
       "name": "Zenithian Armor",
@@ -256,7 +279,8 @@
       "defense": 70,
       "cursed": null,
       "special": "Reduces Dragonbreath, Fire and Ice damage",
-      "locations": ["Shrine of Breaking Waves"]
+      "locations": ["Shrine of Breaking Waves"],
+      "short": "Zenithian"
     },
     {
       "name": "Metal Babble Armor",
@@ -264,7 +288,8 @@
       "defense": 95,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "M.B.Armor"
     }
   ],
   "shields": [
@@ -274,7 +299,8 @@
       "defense": 4,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Leather"
     },
     {
       "name": "Scale Shield",
@@ -282,7 +308,8 @@
       "defense": 7,
       "cursed": null,
       "special": null,
-      "locations": ["Final Cave"]
+      "locations": ["Final Cave"],
+      "short": "Scale"
     },
     {
       "name": "Iron Shield",
@@ -290,7 +317,8 @@
       "defense": 12,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Iron"
     },
     {
       "name": "Dragon Shield",
@@ -298,7 +326,8 @@
       "defense": 30,
       "cursed": null,
       "special": "Reduces Dragonbreath damage",
-      "locations": []
+      "locations": [],
+      "short": "Dragon"
     },
     {
       "name": "Shield of Strength",
@@ -306,7 +335,8 @@
       "defense": 40,
       "cursed": null,
       "special": "Item: casts Healmore",
-      "locations": []
+      "locations": [],
+      "short": "Strength"
     },
     {
       "name": "Mirror Shield",
@@ -314,7 +344,8 @@
       "defense": 45,
       "cursed": null,
       "special": "Reflects spell damage back at caster.",
-      "locations": ["Final Cave"]
+      "locations": ["Final Cave"],
+      "short": "Mirror"
     },
     {
       "name": "Aeolus Shield",
@@ -322,7 +353,8 @@
       "defense": 50,
       "cursed": null,
       "special": "Item: casts Expel",
-      "locations": ["Dire Palace"]
+      "locations": ["Dire Palace"],
+      "short": "Aeolus"
     },
     {
       "name": "Zenithian Shield",
@@ -330,7 +362,8 @@
       "defense": 55,
       "cursed": null,
       "special": "Item: casts Bounce",
-      "locations": ["Gardenbur"]
+      "locations": ["Gardenbur"],
+      "short": "Zenithian"
     },
     {
       "name": "Metal Babble Shield",
@@ -338,7 +371,8 @@
       "defense": 60,
       "cursed": null,
       "special": "Item: casts Fendspell.",
-      "locations": ["Casino", "50000 coins"]
+      "locations": ["Casino", "50000 coins"],
+      "short": "M.B.Shield"
     }
   ],
   "helmets": [
@@ -348,7 +382,8 @@
       "defense": 2,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Leather"
     },
     {
       "name": "Wooden Hat",
@@ -356,7 +391,8 @@
       "defense": 6,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Wooden"
     },
     {
       "name": "Feather Hat",
@@ -364,7 +400,8 @@
       "defense": 8,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Feather"
     },
     {
       "name": "Golden Barrette",
@@ -372,7 +409,8 @@
       "defense": 12,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Barrette"
     },
     {
       "name": "Hat of Happiness",
@@ -380,7 +418,8 @@
       "defense": 15,
       "cursed": null,
       "special": "Restores 1 MP every four steps",
-      "locations": ["Small Medal King", "4 medals"]
+      "locations": ["Small Medal King", "4 medals"],
+      "short": "Happiness"
     },
     {
       "name": "Iron Helm",
@@ -388,7 +427,8 @@
       "defense": 16,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Iron"
     },
     {
       "name": "Iron Mask",
@@ -396,7 +436,8 @@
       "defense": 25,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Mask"
     },
     {
       "name": "Zenithian Helm",
@@ -404,7 +445,8 @@
       "defense": 30,
       "cursed": null,
       "special": null,
-      "locations": ["Stancia"]
+      "locations": ["Stancia"],
+      "short": "Zenithian"
     },
     {
       "name": "Metal Babble Helm",
@@ -412,7 +454,8 @@
       "defense": 50,
       "cursed": null,
       "special": null,
-      "locations": ["Small Medal King", "20 medals"]
+      "locations": ["Small Medal King", "20 medals"],
+      "short": "M.B.Helm"
     },
     {
       "name": "Mask of Corruption",
@@ -420,7 +463,8 @@
       "defense": 200,
       "cursed": "wearer is confused",
       "special": null,
-      "locations": ["Cascade Cave"]
+      "locations": ["Cascade Cave"],
+      "short": "Corruption"
     }
   ],
   "weapons": [
@@ -430,7 +474,8 @@
       "attack": 0,
       "cursed": null,
       "special": "Instant-kill chance",
-      "locations": []
+      "locations": [],
+      "short": "Needle"
     },
     {
       "name": "Cypress Stick",
@@ -438,7 +483,8 @@
       "attack": 2,
       "cursed": null,
       "special": null,
-      "locations": ["one location only"]
+      "locations": ["one location only"],
+      "short": "Cypress"
     },
     {
       "name": "Stiletto Earrings",
@@ -446,7 +492,8 @@
       "attack": 5,
       "cursed": null,
       "special": "Attacks twice per turn",
-      "locations": []
+      "locations": [],
+      "short": "Stiletto"
     },
     {
       "name": "Staff of Healing",
@@ -454,7 +501,8 @@
       "attack": 5,
       "cursed": null,
       "special": "Item: casts HealMore",
-      "locations": ["World Tree"]
+      "locations": ["World Tree"],
+      "short": "Healing"
     },
     {
       "name": "Club",
@@ -462,7 +510,8 @@
       "attack": 7,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Club"
     },
     {
       "name": "Copper Sword",
@@ -470,7 +519,8 @@
       "attack": 12,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Copper"
     },
     {
       "name": "Thorn Whip",
@@ -478,7 +528,8 @@
       "attack": 14,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Thorn"
     },
     {
       "name": "Boomerang",
@@ -486,7 +537,8 @@
       "attack": 18,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Boomerang"
     },
     {
       "name": "Chain Sickle",
@@ -494,7 +546,8 @@
       "attack": 20,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Chain"
     },
     {
       "name": "Silver Tarot Cards",
@@ -502,7 +555,8 @@
       "attack": 21,
       "cursed": null,
       "special": "Item: 1 of 9 random effects",
-      "locations": ["Akemto Mine"]
+      "locations": ["Akemto Mine"],
+      "short": "Tarot"
     },
     {
       "name": "Iron Fan",
@@ -510,7 +564,8 @@
       "attack": 22,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Fan"
     },
     {
       "name": "Venomous Dagger",
@@ -518,7 +573,8 @@
       "attack": 24,
       "cursed": null,
       "special": "Inflicts paralysis on enemy",
-      "locations": []
+      "locations": [],
+      "short": "Venomous"
     },
     {
       "name": "Iron Spear",
@@ -526,7 +582,8 @@
       "attack": 28,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Spear"
     },
     {
       "name": "Staff of Thunder",
@@ -534,7 +591,8 @@
       "attack": 29,
       "cursed": null,
       "special": "Item: casts FireBane",
-      "locations": ["Palace of Necrosaro"]
+      "locations": ["Palace of Necrosaro"],
+      "short": "St.Thunder"
     },
     {
       "name": "Morning Star",
@@ -542,7 +600,8 @@
       "attack": 33,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Morning"
     },
     {
       "name": "Staff of Jubilation",
@@ -550,7 +609,8 @@
       "attack": 33,
       "cursed": null,
       "special": "Item: Chance of enemy missing a turn",
-      "locations": ["Casino", "1000 coins"]
+      "locations": ["Casino", "1000 coins"],
+      "short": "Jubilation"
     },
     {
       "name": "Abacus of Virtue",
@@ -558,7 +618,8 @@
       "attack": 35,
       "cursed": null,
       "special": "Item: casts Expel",
-      "locations": []
+      "locations": [],
+      "short": "Abacus"
     },
     {
       "name": "Staff of Punishment",
@@ -566,7 +627,8 @@
       "attack": 35,
       "cursed": null,
       "special": "Item: casts InferMore",
-      "locations": ["Small Medal King", "1 medal"]
+      "locations": ["Small Medal King", "1 medal"],
+      "short": "Punishment"
     },
     {
       "name": "Iron Claw",
@@ -574,7 +636,8 @@
       "attack": 38,
       "cursed": null,
       "special": null,
-      "locations": ["Endor Castle"]
+      "locations": ["Endor Castle"],
+      "short": "Claw"
     },
     {
       "name": "Broad Sword",
@@ -582,7 +645,8 @@
       "attack": 40,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Broad"
     },
     {
       "name": "Sword of Malice",
@@ -590,7 +654,8 @@
       "attack": 45,
       "cursed": null,
       "special": "Item: casts Firebal",
-      "locations": ["Loch Tower"]
+      "locations": ["Loch Tower"],
+      "short": "Malice"
     },
     {
       "name": "Battle Axe",
@@ -598,7 +663,8 @@
       "attack": 50,
       "cursed": null,
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Battle"
     },
     {
       "name": "Staff of Antimagic",
@@ -606,7 +672,8 @@
       "attack": 50,
       "cursed": null,
       "special": "Item: casts StopSpell",
-      "locations": ["Royal Crypt"]
+      "locations": ["Royal Crypt"],
+      "short": "Antimagic"
     },
     {
       "name": "Staff of Force",
@@ -614,7 +681,8 @@
       "attack": 55,
       "cursed": null,
       "special": "Uses 3 MP per attack",
-      "locations": []
+      "locations": [],
+      "short": "Force"
     },
     {
       "name": "Sword of Lethargy",
@@ -622,7 +690,8 @@
       "attack": 60,
       "cursed": null,
       "special": "Inflicts sleep on enemy; item: casts Sleepmore",
-      "locations": []
+      "locations": [],
+      "short": "Lethargy"
     },
     {
       "name": "Fire Claw",
@@ -630,7 +699,8 @@
       "attack": 60,
       "cursed": null,
       "special": "Item: casts FireBane",
-      "locations": ["Basement of Gardenbur castle"]
+      "locations": ["Basement of Gardenbur castle"],
+      "short": "Fire"
     },
     {
       "name": "Magma Staff",
@@ -638,7 +708,8 @@
       "attack": 63,
       "cursed": null,
       "special": "Item: casts Boom",
-      "locations": ["Hidden in Santeem Castle"]
+      "locations": ["Hidden in Santeem Castle"],
+      "short": "Magma"
     },
     {
       "name": "Zenithian Sword",
@@ -646,7 +717,8 @@
       "attack": 65,
       "cursed": null,
       "special": "Item: removes status ailments",
-      "locations": ["World Tree"]
+      "locations": ["World Tree"],
+      "short": "Zenithian"
     },
     {
       "name": "Demon Hammer",
@@ -654,7 +726,8 @@
       "attack": 70,
       "cursed": "1/3 critical hit chance, 2/3 miss",
       "special": null,
-      "locations": []
+      "locations": [],
+      "short": "Demon"
     },
     {
       "name": "Ice Blade",
@@ -662,7 +735,8 @@
       "attack": 75,
       "cursed": null,
       "special": "Item: casts Snowstorm",
-      "locations": ["Lakanaba in Chapter 5"]
+      "locations": ["Lakanaba in Chapter 5"],
+      "short": "Ice"
     },
     {
       "name": "Dragon Killer",
@@ -670,7 +744,8 @@
       "attack": 90,
       "cursed": null,
       "special": "Deals extra damage to Dragons",
-      "locations": []
+      "locations": [],
+      "short": "Dragon"
     },
     {
       "name": "Multi-Edge Sword",
@@ -678,7 +753,8 @@
       "attack": 99,
       "cursed": "damages wielder",
       "special": null,
-      "locations": ["Endor"]
+      "locations": ["Endor"],
+      "short": "Multi"
     },
     {
       "name": "Sword of Miracles",
@@ -686,7 +762,8 @@
       "attack": 100,
       "cursed": null,
       "special": "Heals 1/4 HP on non-lethal hits",
-      "locations": ["Small Medal King", "6 medals"]
+      "locations": ["Small Medal King", "6 medals"],
+      "short": "Miracles"
     },
     {
       "name": "Sword of Decimation",
@@ -694,7 +771,8 @@
       "attack": 120,
       "cursed": "user has 0 def Item: casts defence",
       "special": null,
-      "locations": ["Konenbur"]
+      "locations": ["Konenbur"],
+      "short": "Decimation"
     },
     {
       "name": "Metal Babble Sword",
@@ -702,7 +780,8 @@
       "attack": 130,
       "cursed": null,
       "special": "Guaranteed damage to metal enemies",
-      "locations": ["Cascade Cave"]
+      "locations": ["Cascade Cave"],
+      "short": "M.B.Sword"
     }
   ]
 }

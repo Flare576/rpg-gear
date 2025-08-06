@@ -1,402 +1,423 @@
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .table-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            overflow-x: auto; /* Enable horizontal scrolling for wide tables */
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-            white-space: nowrap; /* Prevent text wrapping in cells */
-        }
-        th {
-            background-color: #e2e6e9;
-            color: #555;
-            position: sticky; /* Make headers sticky for horizontal scroll */
-            left: 0;
-            z-index: 1; /* Ensure header stays above content */
-        }
-        td.class-name {
-            background-color: #f9f9f9;
-            font-weight: bold;
-            position: sticky; /* Make class names sticky for horizontal scroll */
-            left: 0;
-            z-index: 1; /* Ensure class name stays above content */
-        }
-        th:first-child, td:first-child {
-            position: sticky;
-            left: 0;
-            z-index: 2; /* Ensure corner cell and class names stay on top */
-            background-color: #e2e6e9; /* Match header background */
-        }
-        .item-available {
-            background-color: #e6ffe6; /* Light green for available items */
-        }
-        .item-not-available {
-            background-color: #ffe6e6; /* Light red for unavailable items */
-            color: #aaa;
-        }
-        .item-cursed {
-            background-color: #ffaaaa; /* Bright red for cursed items */
-            color: #aaa;
-        }
-        .item-type-heading {
-            font-size: 1.5em;
-            color: #34495e;
-            margin-top: 0;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-        }
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- For older browsers -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .table-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        overflow-x: auto; /* Enable horizontal scrolling for wide tables */
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 2px 8px;
+        text-align: left;
+        white-space: nowrap; /* Prevent text wrapping in cells */
+      }
+      th {
+        background-color: #e2e6e9;
+        color: #555;
+        position: sticky; /* Make headers sticky for horizontal scroll */
+        left: 0;
+        z-index: 1; /* Ensure header stays above content */
+      }
+      td.class-name {
+        background-color: #f9f9f9;
+        font-weight: bold;
+        position: sticky; /* Make class names sticky for horizontal scroll */
+        left: 0;
+        z-index: 1; /* Ensure class name stays above content */
+      }
+      th:first-child, td:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 2; /* Ensure corner cell and class names stay on top */
+        background-color: #e2e6e9; /* Match header background */
+      }
+      .item-available {
+        background-color: #e6ffe6; /* Light green for available items */
+      }
+      .item-not-available {
+        background-color: #ffe6e6; /* Light red for unavailable items */
+        color: #aaa;
+      }
+      .item-cursed {
+        background-color: #e74c3c; /* A distinct red for warnings */
+        color: #ffffff; /* White text for contrast */
+        font-weight: bold; /* Make the text stand out */
+      }
+      .item-type-heading {
+        font-size: 1.5em;
+        color: #34495e;
+        margin-top: 0;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+      }
 
-        /* Tooltip styles */
-        .tooltip {
-            position: fixed;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 15px;
-            border-radius: 8px;
-            z-index: 1000; /* Ensure it's on top */
-            max-width: 300px;
-            font-size: 0.9em;
-            display: none; /* Hidden by default */
-            flex-direction: column; /* For content layout */
-            gap: 5px; /* Spacing between info lines */
-            pointer-events: auto; /* Allow clicks on tooltip content */
-            user-select: text; /* Allow selecting text within the tooltip */
-            box-sizing: border-box; /* Include padding and border in the element's total width and height */
-        }
-        .tooltip.visible {
-            display: flex; /* Show when visible */
-        }
-        .tooltip-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-        }
-        .tooltip-title {
-            font-weight: bold;
-            font-size: 1.2em;
-            color: #2c3e50;
-        }
-        .tooltip-close {
-            background: none;
-            border: none;
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #777;
-            cursor: pointer;
-            padding: 0 5px;
-            line-height: 1; /* Prevent extra space */
-        }
-        .tooltip-close:hover {
-            color: #333;
-        }
-        .tooltip-content p {
-            margin: 0; /* Remove default paragraph margin */
-            line-height: 1.4;
-        }
-        .tooltip-content span.label {
-            font-weight: bold;
-            color: #555;
-            margin-right: 5px;
-        }
-        .tooltip-cursed-note {
-            color: red;
-            font-weight: bold;
-            margin-top: 10px;
-        }
+      /* Tooltip styles */
+      .tooltip {
+        position: fixed;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        border-radius: 8px;
+        z-index: 1000; /* Ensure it's on top */
+        max-width: 300px;
+        font-size: 0.9em;
+        display: none; /* Hidden by default */
+        flex-direction: column; /* For content layout */
+        gap: 5px; /* Spacing between info lines */
+        pointer-events: auto; /* Allow clicks on tooltip content */
+        user-select: text; /* Allow selecting text within the tooltip */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+      }
+      .tooltip.visible {
+        display: flex; /* Show when visible */
+      }
+      .tooltip-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+      }
+      .tooltip-title {
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #2c3e50;
+      }
+      .tooltip-close {
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #777;
+        cursor: pointer;
+        padding: 0 5px;
+        line-height: 1; /* Prevent extra space */
+      }
+      .tooltip-close:hover {
+        color: #333;
+      }
+      .tooltip-content p {
+        margin: 0; /* Remove default paragraph margin */
+        line-height: 1.4;
+      }
+      .tooltip-content span.label {
+        font-weight: bold;
+        color: #555;
+        margin-right: 5px;
+      }
+      .tooltip-cursed-note {
+        color: red;
+        font-weight: bold;
+        margin-top: 10px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div style="text-align: center; margin-bottom: 20px;">
-        <label for="gameSelection">Select Game:</label>
-        <select id="gameSelection">
-            <option value="dw3">Dragon Quest III</option>
-            <option value="dw4" selected>Dragon Quest IV</option>
-        </select>
+      <label for="gameSelection">Select Game:</label>
+      <select id="gameSelection">
+        <option value="dw3">Dragon Quest III</option>
+        <option value="dw4" selected>Dragon Quest IV</option>
+      </select>
+      <label style="margin-left: 20px;">
+        <input type="checkbox" id="useFullName" checked> Use Full Names
+      </label>
     </div>
     <h1 id="mainHeading"></h1>
     <div id="app"></div>
 
     <div id="itemTooltip" class="tooltip">
-        <div class="tooltip-header">
-            <span class="tooltip-title"></span>
-            <button class="tooltip-close">&times;</button>
-        </div>
-        <div class="tooltip-content">
-            <p><span class="label">Type:</span> <span id="tooltipType"></span></p>
-            <p><span class="label">Price:</span> <span id="tooltipPrice"></span></p>
-            <p><span class="label">Attack:</span> <span id="tooltipAttack"></span></p>
-            <p><span class="label">Defense:</span> <span id="tooltipDefense"></span></p>
-            <p><span class="label">Effect:</span> <span id="tooltipEffect"></span></p>
-            <p class="tooltip-cursed-note" id="tooltipCursedNote" style="display: none;">This item is cursed!</p>
-        </div>
+      <div class="tooltip-header">
+        <span class="tooltip-title"></span>
+        <button class="tooltip-close">&times;</button>
+      </div>
+      <div class="tooltip-content">
+        <p><span class="label">Type:</span> <span id="tooltipType"></span></p>
+        <p><span class="label">Price:</span> <span id="tooltipPrice"></span></p>
+        <p><span class="label">Attack:</span> <span id="tooltipAttack"></span></p>
+        <p><span class="label">Defense:</span> <span id="tooltipDefense"></span></p>
+        <p><span class="label">Effect:</span> <span id="tooltipEffect"></span></p>
+        <p class="tooltip-cursed-note" id="tooltipCursedNote" style="display: none;">This item is cursed!</p>
+      </div>
     </div>
 
     <script>
-        const version = 1;
-        async function safeFetchJson(url) {
-          const finalUrl = url + (url.includes('?') ? '&v=' : '?v=') + version;
-          const res = await fetch(finalUrl);
-          if (!res.ok) {
-            throw new Error(`HTTP ${res.status}: ${url}`);
+      const version = 1;
+      async function safeFetchJson(url) {
+        const finalUrl = url + (url.includes('?') ? '&v=' : '?v=') + version;
+        const res = await fetch(finalUrl);
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}: ${url}`);
+        }
+        return res.json();
+      }
+
+      const appDiv = document.getElementById('app');
+      const gameSelection = document.getElementById('gameSelection');
+      const mainHeading = document.getElementById('mainHeading');
+      const useFullNameCheckbox = document.getElementById('useFullName'); // Get reference to the new checkbox
+
+      let allItemsMap = new Map(); // To store all items for quick lookup
+
+      // Tooltip elements
+      const itemTooltip = document.getElementById('itemTooltip');
+      const tooltipTitle = itemTooltip.querySelector('.tooltip-title');
+      const tooltipType = itemTooltip.querySelector('#tooltipType');
+      const tooltipPrice = itemTooltip.querySelector('#tooltipPrice');
+      const tooltipAttack = itemTooltip.querySelector('#tooltipAttack');
+      const tooltipDefense = itemTooltip.querySelector('#tooltipDefense');
+      const tooltipEffect = itemTooltip.querySelector('#tooltipEffect');
+      const tooltipCursedNote = itemTooltip.querySelector('#tooltipCursedNote');
+      const tooltipCloseButton = itemTooltip.querySelector('.tooltip-close');
+
+      // Get references to the parent <p> elements for Attack and Defense
+      const tooltipAttackParagraph = tooltipAttack.closest('p');
+      const tooltipDefenseParagraph = tooltipDefense.closest('p');
+
+      function showTooltip(itemName, targetElement, event) {
+        const item = allItemsMap.get(itemName);
+        if (!item) {
+          console.warn('Item not found for tooltip:', itemName);
+          return;
+        }
+
+        // Populate tooltip
+        tooltipTitle.textContent = item.name;
+        tooltipType.textContent = item.type.charAt(0).toUpperCase() + item.type.slice(1);
+        tooltipPrice.textContent = item.price ? item.price.toLocaleString() : 'N/A';
+        tooltipEffect.textContent = item.special || 'None';
+        tooltipCursedNote.textContent = "CURSED! " + item.cursed;
+        tooltipCursedNote.style.display = item.cursed ? 'block' : 'none';
+
+        // Handle Attack field visibility and content
+        if (['armor', 'shields', 'helmets'].includes(item.type) && item.attack === undefined) {
+          tooltipAttackParagraph.style.display = 'none';
+        } else {
+          tooltipAttackParagraph.style.display = 'flex'; // Or 'block', depending on desired layout
+          tooltipAttack.textContent = item.attack !== undefined ? item.attack : 'N/A';
+        }
+
+        // Handle Defense field visibility and content
+        if (item.type === 'weapons' && item.defense === undefined) {
+          tooltipDefenseParagraph.style.display = 'none';
+        } else {
+          tooltipDefenseParagraph.style.display = 'flex'; // Or 'block', depending on desired layout
+          tooltipDefense.textContent = item.defense !== undefined ? item.defense : 'N/A';
+        }
+
+        // Position tooltip
+        const rect = targetElement.getBoundingClientRect();
+        let top = rect.bottom + 10; // 10px margin below element, relative to viewport
+        let left = rect.left; // relative to viewport
+
+        // Adjust position to stay within viewport
+        // Check if tooltip overflows right
+        if (left + itemTooltip.offsetWidth > window.innerWidth - 10) { // 10px margin from right
+          left = window.innerWidth - itemTooltip.offsetWidth - 10;
+          if (left < 10) { // If still overflows, align to left edge (10px margin)
+            left = 10;
           }
-          return res.json();
         }
 
-        const appDiv = document.getElementById('app');
-        const gameSelection = document.getElementById('gameSelection');
-        const mainHeading = document.getElementById('mainHeading');
-
-        let allItemsMap = new Map(); // To store all items for quick lookup
-
-        // Tooltip elements
-        const itemTooltip = document.getElementById('itemTooltip');
-        const tooltipTitle = itemTooltip.querySelector('.tooltip-title');
-        const tooltipType = itemTooltip.querySelector('#tooltipType');
-        const tooltipPrice = itemTooltip.querySelector('#tooltipPrice');
-        const tooltipAttack = itemTooltip.querySelector('#tooltipAttack');
-        const tooltipDefense = itemTooltip.querySelector('#tooltipDefense');
-        const tooltipEffect = itemTooltip.querySelector('#tooltipEffect');
-        const tooltipCursedNote = itemTooltip.querySelector('#tooltipCursedNote');
-        const tooltipCloseButton = itemTooltip.querySelector('.tooltip-close');
-
-        // Get references to the parent <p> elements for Attack and Defense
-        const tooltipAttackParagraph = tooltipAttack.closest('p');
-        const tooltipDefenseParagraph = tooltipDefense.closest('p');
-
-        function showTooltip(itemName, targetElement, event) {
-            const item = allItemsMap.get(itemName);
-            if (!item) {
-                console.warn('Item not found for tooltip:', itemName);
-                return;
-            }
-
-            // Populate tooltip
-            tooltipTitle.textContent = item.name;
-            tooltipType.textContent = item.type.charAt(0).toUpperCase() + item.type.slice(1);
-            tooltipPrice.textContent = item.price ? item.price.toLocaleString() : 'N/A';
-            tooltipEffect.textContent = item.special || 'None';
-            tooltipCursedNote.textContent = "CURSED! " + item.cursed;
-            tooltipCursedNote.style.display = item.cursed ? 'block' : 'none';
-
-            // Handle Attack field visibility and content
-            if (['armor', 'shields', 'helmets'].includes(item.type) && item.attack === undefined) {
-                tooltipAttackParagraph.style.display = 'none';
-            } else {
-                tooltipAttackParagraph.style.display = 'flex'; // Or 'block', depending on desired layout
-                tooltipAttack.textContent = item.attack !== undefined ? item.attack : 'N/A';
-            }
-
-            // Handle Defense field visibility and content
-            if (item.type === 'weapons' && item.defense === undefined) {
-                tooltipDefenseParagraph.style.display = 'none';
-            } else {
-                tooltipDefenseParagraph.style.display = 'flex'; // Or 'block', depending on desired layout
-                tooltipDefense.textContent = item.defense !== undefined ? item.defense : 'N/A';
-            }
-
-            // Position tooltip
-            const rect = targetElement.getBoundingClientRect();
-            let top = rect.bottom + 10; // 10px margin below element, relative to viewport
-            let left = rect.left; // relative to viewport
-
-            // Adjust position to stay within viewport
-            // Check if tooltip overflows right
-            if (left + itemTooltip.offsetWidth > window.innerWidth - 10) { // 10px margin from right
-                left = window.innerWidth - itemTooltip.offsetWidth - 10;
-                if (left < 10) { // If still overflows, align to left edge (10px margin)
-                    left = 10;
-                }
-            }
-
-            // Check if tooltip overflows bottom
-            if (top + itemTooltip.offsetHeight > window.innerHeight - 10) { // 10px margin from bottom
-                // If overflows bottom, try placing above the element
-                top = rect.top - itemTooltip.offsetHeight - 10;
-                if (top < 10) { // If still overflows top, place at top of viewport (10px margin)
-                    top = 10;
-                }
-            }
-
-            itemTooltip.style.left = `${left}px`;
-            itemTooltip.style.top = `${top}px`;
-            itemTooltip.classList.add('visible');
-
-            // Stop event propagation to prevent immediate hiding from document click
-            if (event) {
-                event.stopPropagation();
-            }
+        // Check if tooltip overflows bottom
+        if (top + itemTooltip.offsetHeight > window.innerHeight - 10) { // 10px margin from bottom
+          // If overflows bottom, try placing above the element
+          top = rect.top - itemTooltip.offsetHeight - 10;
+          if (top < 10) { // If still overflows top, place at top of viewport (10px margin)
+            top = 10;
+          }
         }
 
-        function hideTooltip() {
-            itemTooltip.classList.remove('visible');
+        itemTooltip.style.left = `${left}px`;
+        itemTooltip.style.top = `${top}px`;
+        itemTooltip.classList.add('visible');
+
+        // Stop event propagation to prevent immediate hiding from document click
+        if (event) {
+          event.stopPropagation();
+        }
+      }
+
+      function hideTooltip() {
+        itemTooltip.classList.remove('visible');
+      }
+
+      async function loadGameData(gameId) {
+        appDiv.innerHTML = ''; // Clear previous content
+        allItemsMap.clear(); // Clear map for new game data
+
+        let gameTitle = '';
+        let jsonPath = '';
+
+        if (gameId === 'dw3') {
+          gameTitle = 'Dragon Quest III';
+          jsonPath = 'dat/dw3.json';
+        } else if (gameId === 'dw4') {
+          gameTitle = 'Dragon Quest IV';
+          jsonPath = 'dat/dw4.json';
+        } else {
+          console.error('Unknown game ID:', gameId);
+          mainHeading.textContent = 'Error: Invalid Game Selection';
+          return;
         }
 
-        async function loadGameData(gameId) {
-            appDiv.innerHTML = ''; // Clear previous content
-            allItemsMap.clear(); // Clear map for new game data
+        mainHeading.textContent = `${gameTitle} Item Compatibility`;
 
-            let gameTitle = '';
-            let jsonPath = '';
+        try {
+          // Determine whether to use full names or short names
+          const nameField = useFullNameCheckbox.checked ? 'name' : 'short';
 
-            if (gameId === 'dw3') {
-                gameTitle = 'Dragon Quest III';
-                jsonPath = 'dat/dw3.json';
-            } else if (gameId === 'dw4') {
-                gameTitle = 'Dragon Quest IV';
-                jsonPath = 'dat/dw4.json';
-            } else {
-                console.error('Unknown game ID:', gameId);
-                mainHeading.textContent = 'Error: Invalid Game Selection';
-                return;
+          const jsonData = await safeFetchJson(jsonPath);
+          const classes = jsonData.classes;
+
+          // Define the order of item types for display
+          const itemTypesOrder = ['armor', 'shields', 'helmets', 'weapons'];
+
+          // Populate allItemsMap
+          itemTypesOrder.forEach(itemType => {
+            const itemsOfType = jsonData[itemType];
+            if (itemsOfType) {
+              itemsOfType.forEach(item => {
+                allItemsMap.set(item.name, { ...item, type: itemType }); // Add type for display
+              });
+            }
+          });
+
+          itemTypesOrder.forEach(itemType => {
+            const itemsOfType = jsonData[itemType];
+            if (!itemsOfType || itemsOfType.length === 0) {
+              return; // Skip if no items for this type
             }
 
-            mainHeading.textContent = `${gameTitle} Item Compatibility`;
+            const itemTypeName = itemType.charAt(0).toUpperCase() + itemType.slice(1); // Capitalize first letter
 
-            try {
-                const jsonData = await safeFetchJson(jsonPath);
-                const classes = jsonData.classes;
+            const tableContainer = document.createElement('div');
+            tableContainer.classList.add('table-container');
 
-                // Define the order of item types for display
-                const itemTypesOrder = ['armor', 'shields', 'helmets', 'weapons'];
+            const heading = document.createElement('h2');
+            heading.classList.add('item-type-heading');
+            heading.textContent = `${itemTypeName} Compatibility`;
+            tableContainer.appendChild(heading);
 
-                // Populate allItemsMap
-                itemTypesOrder.forEach(itemType => {
-                    const itemsOfType = jsonData[itemType];
-                    if (itemsOfType) {
-                        itemsOfType.forEach(item => {
-                            allItemsMap.set(item.name, { ...item, type: itemType }); // Add type for display
-                        });
-                    }
-                });
+            const table = document.createElement('table');
+            const thead = document.createElement('thead');
+            const tbody = document.createElement('tbody');
 
-                itemTypesOrder.forEach(itemType => {
-                    const itemsOfType = jsonData[itemType];
-                    if (!itemsOfType || itemsOfType.length === 0) {
-                        return; // Skip if no items for this type
-                    }
+            // Create table header row
+            const headerRow = document.createElement('tr');
+            const emptyTh = document.createElement('th');
+            emptyTh.textContent = 'Class \\ Item'; // Corner cell
+            headerRow.appendChild(emptyTh);
 
-                    const itemTypeName = itemType.charAt(0).toUpperCase() + itemType.slice(1); // Capitalize first letter
-
-                    const tableContainer = document.createElement('div');
-                    tableContainer.classList.add('table-container');
-
-                    const heading = document.createElement('h2');
-                    heading.classList.add('item-type-heading');
-                    heading.textContent = `${itemTypeName} Compatibility`;
-                    tableContainer.appendChild(heading);
-
-                    const table = document.createElement('table');
-                    const thead = document.createElement('thead');
-                    const tbody = document.createElement('tbody');
-
-                    // Create table header row
-                    const headerRow = document.createElement('tr');
-                    const emptyTh = document.createElement('th');
-                    emptyTh.textContent = 'Class \\ Item'; // Corner cell
-                    headerRow.appendChild(emptyTh);
-
-                    itemsOfType.forEach(item => {
-                        const th = document.createElement('th');
-                        th.textContent = item.name;
-                        th.style.cursor = 'pointer'; // Indicate clickability
-                        th.setAttribute('data-item-name', item.name); // Store item name
-                        th.addEventListener('click', (e) => showTooltip(item.name, th, e));
-                        headerRow.appendChild(th);
-                    });
-                    thead.appendChild(headerRow);
-                    table.appendChild(thead);
-
-                    // Create table body rows
-                    classes.forEach(cls => {
-                        const row = document.createElement('tr');
-                        const classNameTd = document.createElement('td');
-                        classNameTd.classList.add('class-name');
-                        classNameTd.textContent = cls.name;
-                        classNameTd.style.backgroundColor = cls.color; // Set class color (if defined in JSON data)
-                        row.appendChild(classNameTd);
-
-                        itemsOfType.forEach(item => {
-                            const cell = document.createElement('td');
-                            // Check if the current class (cls) has the current item (item.name) in its allowed list for this item type
-                            const isCompatible = cls[itemType] && cls[itemType].includes(item.name);
-                            const isCursed = item.cursed !== null;
-                            
-                            if (isCompatible) {
-                                cell.textContent = item.name;
-                                if (isCursed) {
-                                  cell.classList.add('item-cursed');
-                                } else {
-                                  cell.classList.add('item-available');
-                                }
-                                cell.style.cursor = 'pointer'; // Indicate clickability
-                                cell.setAttribute('data-item-name', item.name); // Store item name
-                                cell.addEventListener('click', (e) => showTooltip(item.name, cell, e));
-                            } else {
-                                // cell.textContent = '—'; // Or leave empty
-                                cell.classList.add('item-not-available');
-                            }
-                            row.appendChild(cell);
-                        });
-                        tbody.appendChild(row);
-                    });
-                    table.appendChild(tbody);
-                    tableContainer.appendChild(table);
-                    appDiv.appendChild(tableContainer);
-                });
-            } catch (error) {
-                appDiv.innerHTML = `<p style="color: red; text-align: center;">Error loading data for ${gameTitle}: ${error.message}</p>`;
-                console.error('Error loading game data:', error);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // Load initial data based on the default selected option
-            loadGameData(gameSelection.value);
-
-            // Add event listener for dropdown changes
-            gameSelection.addEventListener('change', (event) => {
-                hideTooltip(); // Hide tooltip when game changes
-                loadGameData(event.target.value);
+            itemsOfType.forEach(item => {
+              const th = document.createElement('th');
+              th.textContent = item[nameField];
+              th.style.cursor = 'pointer'; // Indicate clickability
+              th.setAttribute('data-item-name', item.name); // Store item name
+              th.addEventListener('click', (e) => showTooltip(item.name, th, e));
+              headerRow.appendChild(th);
             });
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
 
-            // Add listener for close button
-            tooltipCloseButton.addEventListener('click', hideTooltip);
+            // Create table body rows
+            classes.forEach(cls => {
+              const row = document.createElement('tr');
+              const classNameTd = document.createElement('td');
+              classNameTd.classList.add('class-name');
+              classNameTd.textContent = cls.name;
+              classNameTd.style.backgroundColor = cls.color; // Set class color (if defined in JSON data)
+              row.appendChild(classNameTd);
 
-            // Add event listener to hide tooltip on outside click/tap
-            document.addEventListener('click', (event) => {
-                // If the tooltip is visible AND the click was NOT inside the tooltip itself
-                if (itemTooltip.classList.contains('visible') && !itemTooltip.contains(event.target)) {
-                    hideTooltip();
+              itemsOfType.forEach(item => {
+                const cell = document.createElement('td');
+                // Check if the current class (cls) has the current item (item.name) in its allowed list for this item type
+                const isCompatible = cls[itemType] && cls[itemType].includes(item.name);
+                const isCursed = item.cursed !== null;
+
+                if (isCompatible) {
+                  cell.textContent = item[nameField];
+                  if (isCursed) {
+                    cell.classList.add('item-cursed');
+                  } else {
+                    cell.classList.add('item-available');
+                  }
+                  cell.style.cursor = 'pointer'; // Indicate clickability
+                  cell.setAttribute('data-item-name', item.name); // Store item name
+                  cell.addEventListener('click', (e) => showTooltip(item.name, cell, e));
+                } else {
+                  // cell.textContent = '—'; // Or leave empty
+                  // cell.classList.add('item-not-available');
+                  cell.style.backgroundColor = cls.color;
                 }
+                row.appendChild(cell);
+              });
+              tbody.appendChild(row);
             });
+            table.appendChild(tbody);
+            tableContainer.appendChild(table);
+            appDiv.appendChild(tableContainer);
+          });
+        } catch (error) {
+          appDiv.innerHTML = `<p style="color: red; text-align: center;">Error loading data for ${gameTitle}: ${error.message}</p>`;
+          console.error('Error loading game data:', error);
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // Load initial data based on the default selected option
+        loadGameData(gameSelection.value);
+
+        // Add event listener for dropdown changes
+        gameSelection.addEventListener('change', (event) => {
+          hideTooltip(); // Hide tooltip when game changes
+          loadGameData(event.target.value);
         });
+
+        // Add event listener for the new checkbox changes
+        useFullNameCheckbox.addEventListener('change', () => {
+          hideTooltip(); // Hide tooltip when name preference changes
+          loadGameData(gameSelection.value); // Reload data to reflect name change
+        });
+
+        // Add listener for close button
+        tooltipCloseButton.addEventListener('click', hideTooltip);
+
+        // Add event listener to hide tooltip on outside click/tap
+        document.addEventListener('click', (event) => {
+          // If the tooltip is visible AND the click was NOT inside the tooltip itself
+          if (itemTooltip.classList.contains('visible') && !itemTooltip.contains(event.target)) {
+            hideTooltip();
+          }
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
