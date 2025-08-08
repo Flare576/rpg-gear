@@ -424,7 +424,28 @@
       }
 
       document.addEventListener('DOMContentLoaded', () => {
-        // Load initial data based on the default selected option
+        const urlParams = new URLSearchParams(window.location.search);
+        const gameFromUrl = urlParams.get('game');
+        const shortFromUrl = urlParams.get('short');
+
+        // Apply game selection from URL
+        if (gameFromUrl) {
+          // Check if the gameFromUrl is a valid option in the dropdown
+          const validGameOptions = Array.from(gameSelection.options).map(option => option.value);
+          if (validGameOptions.includes(gameFromUrl)) {
+            gameSelection.value = gameFromUrl;
+          }
+        }
+
+        // Apply short name preference from URL
+        if (shortFromUrl === 'true') {
+          useFullNameCheckbox.checked = false; // If 'short=true', then uncheck 'Use Full Names'
+        } else if (shortFromUrl === 'false') {
+          useFullNameCheckbox.checked = true; // If 'short=false', then check 'Use Full Names'
+        }
+        // If 'short' parameter is not present or not 'true'/'false', checkbox retains its default or previously set state.
+
+        // Load data based on the initial/URL-driven selections
         loadGameData(gameSelection.value);
 
         // Add event listener for dropdown changes
